@@ -53,4 +53,9 @@ class ViewController: UIViewController {
         nextButton.setImage(UIImage(named: "arrow"), for: .normal)
     }
     
+    @IBAction func tappedNextButton(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: "LoginViewController", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+    }
+    
 }
