@@ -32,11 +32,24 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configDelegate()
+        configTextField()
         configView()
         configImage()
         configLabel()
         configButton()
+        validaTextField()
         
+    }
+    
+    func configDelegate() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    func configTextField() {
+        emailTextField.placeholder = "Digite seu e-mail"
+        passwordTextField.placeholder = "Digite sua senha"
     }
     
     func configView() {
@@ -55,18 +68,57 @@ class LoginViewController: UIViewController {
     func configLabel() {
         enterLabel.text = "Entrar"
         connectGoogleLabel.text = "ou conecte-se com"
+        enterLabel.textColor = .white
         
     }
     
     func configButton(){
-        resetPasswordButton.setTitle("Redefinir senha", for: .normal)
+        
         enterButton.setTitle("Entrar", for: .normal)
+        let customCollorButton = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
+        enterButton.backgroundColor = customCollorButton
+        enterButton.setTitleColor(UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0), for: .normal)
+        enterButton.layer.cornerRadius = 8
+        
+        
         registerButton.setTitle("Registre-se agora", for: .normal)
-//        googleButton.setImage(UIImage(named: "GoogleImage"), for: .normal)
-//        googleButton.imageView?.contentMode = .scaleToFill
-//        googleButton.frame = CGSize(width: 30, height: 30)
+        registerButton.tintColor = .white
+//      googleButton.setImage(UIImage(named: "GoogleImage"), for: .normal)
+//      googleButton.imageView?.contentMode = .scaleToFill
+//      googleButton.frame = CGSize(width: 30, height: 30)
+        resetPasswordButton.tintColor = .white
+        resetPasswordButton.setTitle("Redefinir senha", for: .normal)
+        
+        connectGoogleLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+        
+        
     }
     
+    func validaTextField() {
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            enterButton.isEnabled = true
+        } else {
+            enterButton.isEnabled = false
+        }
+        
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
     
+    // esté metodo é disparado quando o teclado é levantado
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
     
+    // esté metodo é disparado o teclado é abaixado
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        validaTextField()
+    }
+    
+    // esté método sempre é disparado quando clicamos no botão "retorno"
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.becomeFirstResponder()
+        return true
+    }
 }

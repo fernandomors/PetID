@@ -33,7 +33,8 @@ class ViewController: UIViewController {
         
       let corCustomizadaView = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
         backgraundView.backgroundColor = corCustomizadaView
-        backgraundView.layer.cornerRadius = 45
+//        backgraundView.cornerRadius ([.topLeft, .topRight], radius: 20)
+        backgraundView.layer.cornerRadius = 25
         
     }
     
@@ -47,6 +48,7 @@ class ViewController: UIViewController {
         description02Label.font = UIFont.systemFont(ofSize: 30, weight: .light)
         description02Label.textColor = UIColor.white
         description02Label.numberOfLines = 0
+    
     }
     
     func configButton() {
@@ -56,6 +58,7 @@ class ViewController: UIViewController {
     @IBAction func tappedNextButton(_ sender: UIButton) {
         let viewController = UIStoryboard(name: "LoginViewController", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
         navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+        
     }
     
 }
