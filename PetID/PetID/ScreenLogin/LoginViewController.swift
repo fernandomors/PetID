@@ -8,9 +8,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var backgraundView: UIView!
-
+    
     @IBOutlet weak var logoImage: UIImageView!
     
     @IBOutlet weak var enterLabel: UILabel!
@@ -48,8 +48,8 @@ class LoginViewController: UIViewController {
     }
     
     func configTextField() {
-        emailTextField.placeholder = "Digite seu e-mail"
-        passwordTextField.placeholder = "Digite sua senha"
+        emailTextField.placeholder = "Usuário ou email"
+        passwordTextField.placeholder = "Senha"
     }
     
     func configView() {
@@ -83,9 +83,9 @@ class LoginViewController: UIViewController {
         
         registerButton.setTitle("Registre-se agora", for: .normal)
         registerButton.tintColor = .white
-//      googleButton.setImage(UIImage(named: "GoogleImage"), for: .normal)
-//      googleButton.imageView?.contentMode = .scaleToFill
-//      googleButton.frame = CGSize(width: 30, height: 30)
+        //      googleButton.setImage(UIImage(named: "GoogleImage"), for: .normal)
+        //      googleButton.imageView?.contentMode = .scaleToFill
+        //      googleButton.frame = CGSize(width: 30, height: 30)
         resetPasswordButton.tintColor = .white
         resetPasswordButton.setTitle("Redefinir senha", for: .normal)
         
@@ -102,6 +102,18 @@ class LoginViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func tappedResetPasswordButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func tappedEnterButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: "RegisterViewCpntroller", bundle: nil).instantiateViewController(withIdentifier: "RegisterViewCpntroller") as? RegisterViewCpntroller
+        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+    }
+    
 }
 
 extension LoginViewController: UITextFieldDelegate {
