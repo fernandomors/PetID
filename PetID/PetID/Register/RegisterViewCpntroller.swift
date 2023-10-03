@@ -33,6 +33,7 @@ class RegisterViewCpntroller: UIViewController {
         configLabel()
         configImage()
         configButton()
+        validaTextField()
         
     }
     func configDelegate() {
@@ -74,11 +75,21 @@ class RegisterViewCpntroller: UIViewController {
         createAccountButton.layer.cornerRadius = 10
         createAccountButton.tintColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
         createAccountButton.setTitle("Criar conta", for: .normal)
+        createAccountButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
     }
     
     @IBAction func tappedCreateAccountButton(_ sender: UIButton) {
+        
     }
     
+    
+    func validaTextField() {
+        if nameTextField.text != "" && lastNameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != "" && confirmPasswordTextField.text != "" {
+            createAccountButton.isEnabled = true
+        } else {
+            createAccountButton.isEnabled = false
+        }
+    }
     
 }
 
@@ -89,7 +100,7 @@ extension RegisterViewCpntroller: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        validaTextField()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
