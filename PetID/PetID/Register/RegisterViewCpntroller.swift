@@ -47,10 +47,24 @@ class RegisterViewCpntroller: UIViewController {
     func configTextField() {
         
         nameTextField.placeholder = "Nome"
+        nameTextField.layer.cornerRadius = 10
+        nameTextField.layer.masksToBounds = true
+        
         lastNameTextField.placeholder = "Sobrenome"
+        lastNameTextField.layer.cornerRadius = 10
+        lastNameTextField.layer.masksToBounds = true
+        
         emailTextField.placeholder = "Email"
+        emailTextField.layer.cornerRadius = 10
+        emailTextField.layer.masksToBounds = true
+        
         passwordTextField.placeholder = "Senha"
+        passwordTextField.layer.cornerRadius = 10
+        passwordTextField.layer.masksToBounds = true
+        
         confirmPasswordTextField.placeholder = "Confirme a senha"
+        confirmPasswordTextField.layer.cornerRadius = 10
+        confirmPasswordTextField.layer.masksToBounds = true
         
     }
     

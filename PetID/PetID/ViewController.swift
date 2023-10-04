@@ -33,8 +33,7 @@ class ViewController: UIViewController {
         
       let corCustomizadaView = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
         backgraundView.backgroundColor = corCustomizadaView
-//        backgraundView.cornerRadius ([.topLeft, .topRight], radius: 20)
-        backgraundView.layer.cornerRadius = 25
+        backgraundView.layer.cornerRadius = 50
         
     }
     

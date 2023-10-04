@@ -49,7 +49,12 @@ class LoginViewController: UIViewController {
     
     func configTextField() {
         emailTextField.placeholder = "Usuário ou email"
+        emailTextField.layer.cornerRadius = 10
+        emailTextField.layer.masksToBounds = true
+        
         passwordTextField.placeholder = "Senha"
+        passwordTextField.layer.cornerRadius = 10
+        passwordTextField.layer.masksToBounds = true
     }
     
     func configView() {
@@ -59,6 +64,7 @@ class LoginViewController: UIViewController {
         // Mudei a cor da minha view (View que vem por defaul)
         let custoCollorBackgraundView = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
         view.backgroundColor = custoCollorBackgraundView
+        backgraundView.roundCorners(cornerRadiuns: 80, typeCorners: .InferiorDireito)
     }
     
     func configImage() {
@@ -67,6 +73,7 @@ class LoginViewController: UIViewController {
     
     func configLabel() {
         enterLabel.text = "Entrar"
+        enterLabel.font = UIFont.boldSystemFont(ofSize: 30)
         connectGoogleLabel.text = "ou conecte-se com"
         enterLabel.textColor = .white
         
@@ -78,7 +85,7 @@ class LoginViewController: UIViewController {
         let customCollorButton = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
         enterButton.backgroundColor = customCollorButton
         enterButton.setTitleColor(UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0), for: .normal)
-        enterButton.layer.cornerRadius = 8
+        enterButton.layer.cornerRadius = 10
         
         
         registerButton.setTitle("Registre-se agora", for: .normal)
@@ -104,6 +111,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedResetPasswordButton(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: "RecoverPasswordViewController", bundle: nil).instantiateViewController(withIdentifier: "RecoverPasswordViewController") as? RecoverPasswordViewController
+        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
