@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UITabBarController {
+class HomeViewController: ViewController {
 
     @IBOutlet weak var personImage: UIImageView!
     

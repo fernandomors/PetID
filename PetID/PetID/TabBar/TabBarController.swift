@@ -24,7 +24,7 @@ class TabBarController: UITabBarController {
             return nav
         }()
         
-        
+        viewControllers = [firstVC]
     }
     
 }
