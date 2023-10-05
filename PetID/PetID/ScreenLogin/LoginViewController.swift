@@ -116,10 +116,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: String(describing: TabBarController.self), bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController
+        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: "RegisterViewCpntroller", bundle: nil).instantiateViewController(withIdentifier: "RegisterViewCpntroller") as? RegisterViewCpntroller
+        let viewController = UIStoryboard(name: "RegisterViewCpntroller", bundle: nil).instantiateViewController(withIdentifier: "RegisterViewCpntroller") as? RegisterViewController
         navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
     }
     

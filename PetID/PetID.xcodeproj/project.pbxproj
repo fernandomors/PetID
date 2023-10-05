@@ -20,10 +20,18 @@
 		6DA6E3922ABCCFEF002412CD /* PetIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA6E3912ABCCFEF002412CD /* PetIDTests.swift */; };
 		6DA6E39C2ABCCFEF002412CD /* PetIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA6E39B2ABCCFEF002412CD /* PetIDUITests.swift */; };
 		6DA6E39E2ABCCFEF002412CD /* PetIDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA6E39D2ABCCFEF002412CD /* PetIDUITestsLaunchTests.swift */; };
-		6DCD96BA2AC8A45C0089F811 /* RegisterViewCpntroller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD96B92AC8A45C0089F811 /* RegisterViewCpntroller.storyboard */; };
-		6DCD96BC2AC8A46B0089F811 /* RegisterViewCpntroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCD96BB2AC8A46B0089F811 /* RegisterViewCpntroller.swift */; };
+		6DBB6A7D2ACDE67400DC8424 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DBB6A7C2ACDE67400DC8424 /* HomeViewController.storyboard */; };
+		6DBB6A7F2ACDE69E00DC8424 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB6A7E2ACDE69E00DC8424 /* HomeViewController.swift */; };
+		6DBB6A842ACE05D700DC8424 /* PetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB6A822ACE05D700DC8424 /* PetsCollectionViewCell.swift */; };
+		6DBB6A852ACE05D700DC8424 /* PetsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBB6A832ACE05D700DC8424 /* PetsCollectionViewCell.xib */; };
+		6DBB6A872ACE087900DC8424 /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB6A862ACE087900DC8424 /* Pets.swift */; };
+		6DCD96BA2AC8A45C0089F811 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD96B92AC8A45C0089F811 /* RegisterViewController.storyboard */; };
+		6DCD96BC2AC8A46B0089F811 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCD96BB2AC8A46B0089F811 /* RegisterViewController.swift */; };
 		6DD1F8972AC49F70007FEC1A /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD1F8962AC49F70007FEC1A /* LoginViewController.storyboard */; };
 		6DD1F8992AC49F8B007FEC1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1F8982AC49F8B007FEC1A /* LoginViewController.swift */; };
+		6DD363AF2ACE530B004C7D49 /* RegisteredPetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD363AE2ACE530B004C7D49 /* RegisteredPetsViewController.swift */; };
+		6DD363B12ACE5326004C7D49 /* RegisteredPetsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD363B02ACE5326004C7D49 /* RegisteredPetsViewController.storyboard */; };
+		6DD363B52ACE6772004C7D49 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD363B42ACE6772004C7D49 /* TabBarController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +69,18 @@
 		6DA6E3972ABCCFEF002412CD /* PetIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA6E39B2ABCCFEF002412CD /* PetIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetIDUITests.swift; sourceTree = "<group>"; };
 		6DA6E39D2ABCCFEF002412CD /* PetIDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetIDUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6DCD96B92AC8A45C0089F811 /* RegisterViewCpntroller.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewCpntroller.storyboard; sourceTree = "<group>"; };
-		6DCD96BB2AC8A46B0089F811 /* RegisterViewCpntroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewCpntroller.swift; sourceTree = "<group>"; };
+		6DBB6A7C2ACDE67400DC8424 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		6DBB6A7E2ACDE69E00DC8424 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6DBB6A822ACE05D700DC8424 /* PetsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewCell.swift; sourceTree = "<group>"; };
+		6DBB6A832ACE05D700DC8424 /* PetsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetsCollectionViewCell.xib; sourceTree = "<group>"; };
+		6DBB6A862ACE087900DC8424 /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
+		6DCD96B92AC8A45C0089F811 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
+		6DCD96BB2AC8A46B0089F811 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6DD1F8962AC49F70007FEC1A /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		6DD1F8982AC49F8B007FEC1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6DD363AE2ACE530B004C7D49 /* RegisteredPetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsViewController.swift; sourceTree = "<group>"; };
+		6DD363B02ACE5326004C7D49 /* RegisteredPetsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisteredPetsViewController.storyboard; sourceTree = "<group>"; };
+		6DD363B42ACE6772004C7D49 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				6D12ADB82ACCD8A600893AA5 /* TabBarController.swift */,
+				6DD363B42ACE6772004C7D49 /* TabBarController.storyboard */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -140,6 +157,10 @@
 		6DA6E3792ABCCFEE002412CD /* PetID */ = {
 			isa = PBXGroup;
 			children = (
+				6DD363AB2ACE52AC004C7D49 /* RegisteredPets */,
+				6DBB6A812ACDE99000DC8424 /* Cell */,
+				6DBB6A802ACDE98800DC8424 /* Model */,
+				6DBB6A7B2ACDE65600DC8424 /* Home */,
 				6D12ADCB2ACD207200893AA5 /* Extension */,
 				6D12ADB72ACCD88200893AA5 /* TabBar */,
 				6D94E4D12ACCAC6E004D53E6 /* PasswordRecoveryScreen */,
@@ -173,11 +194,53 @@
 			path = PetIDUITests;
 			sourceTree = "<group>";
 		};
+		6DBB6A7B2ACDE65600DC8424 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6DBB6A7C2ACDE67400DC8424 /* HomeViewController.storyboard */,
+				6DBB6A7E2ACDE69E00DC8424 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6DBB6A802ACDE98800DC8424 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DBB6A892ACE275800DC8424 /* Pets */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6DBB6A812ACDE99000DC8424 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6DBB6A882ACE274200DC8424 /* Pets */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6DBB6A882ACE274200DC8424 /* Pets */ = {
+			isa = PBXGroup;
+			children = (
+				6DBB6A822ACE05D700DC8424 /* PetsCollectionViewCell.swift */,
+				6DBB6A832ACE05D700DC8424 /* PetsCollectionViewCell.xib */,
+			);
+			path = Pets;
+			sourceTree = "<group>";
+		};
+		6DBB6A892ACE275800DC8424 /* Pets */ = {
+			isa = PBXGroup;
+			children = (
+				6DBB6A862ACE087900DC8424 /* Pets.swift */,
+			);
+			path = Pets;
+			sourceTree = "<group>";
+		};
 		6DCD96B82AC8A3A40089F811 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				6DCD96B92AC8A45C0089F811 /* RegisterViewCpntroller.storyboard */,
-				6DCD96BB2AC8A46B0089F811 /* RegisterViewCpntroller.swift */,
+				6DCD96B92AC8A45C0089F811 /* RegisterViewController.storyboard */,
+				6DCD96BB2AC8A46B0089F811 /* RegisterViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -189,6 +252,15 @@
 				6DD1F8982AC49F8B007FEC1A /* LoginViewController.swift */,
 			);
 			path = ScreenLogin;
+			sourceTree = "<group>";
+		};
+		6DD363AB2ACE52AC004C7D49 /* RegisteredPets */ = {
+			isa = PBXGroup;
+			children = (
+				6DD363AE2ACE530B004C7D49 /* RegisteredPetsViewController.swift */,
+				6DD363B02ACE5326004C7D49 /* RegisteredPetsViewController.storyboard */,
+			);
+			path = RegisteredPets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,9 +369,13 @@
 			files = (
 				6DA6E3872ABCCFEF002412CD /* LaunchScreen.storyboard in Resources */,
 				6D94E4D32ACCAD33004D53E6 /* RecoverPasswordViewController.storyboard in Resources */,
+				6DD363B52ACE6772004C7D49 /* TabBarController.storyboard in Resources */,
+				6DD363B12ACE5326004C7D49 /* RegisteredPetsViewController.storyboard in Resources */,
+				6DBB6A7D2ACDE67400DC8424 /* HomeViewController.storyboard in Resources */,
 				6DD1F8972AC49F70007FEC1A /* LoginViewController.storyboard in Resources */,
-				6DCD96BA2AC8A45C0089F811 /* RegisterViewCpntroller.storyboard in Resources */,
+				6DCD96BA2AC8A45C0089F811 /* RegisterViewController.storyboard in Resources */,
 				6DA6E3842ABCCFEF002412CD /* Assets.xcassets in Resources */,
+				6DBB6A852ACE05D700DC8424 /* PetsCollectionViewCell.xib in Resources */,
 				6DA6E3822ABCCFEE002412CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,12 +403,16 @@
 			files = (
 				6D94E4D52ACCAD43004D53E6 /* RecoverPasswordViewController.swift in Sources */,
 				6DD1F8992AC49F8B007FEC1A /* LoginViewController.swift in Sources */,
+				6DD363AF2ACE530B004C7D49 /* RegisteredPetsViewController.swift in Sources */,
+				6DBB6A842ACE05D700DC8424 /* PetsCollectionViewCell.swift in Sources */,
 				6DA6E37F2ABCCFEE002412CD /* ViewController.swift in Sources */,
+				6DBB6A872ACE087900DC8424 /* Pets.swift in Sources */,
 				6DA6E37B2ABCCFEE002412CD /* AppDelegate.swift in Sources */,
 				6D12ADB92ACCD8A600893AA5 /* TabBarController.swift in Sources */,
+				6DBB6A7F2ACDE69E00DC8424 /* HomeViewController.swift in Sources */,
 				6DA6E37D2ABCCFEE002412CD /* SceneDelegate.swift in Sources */,
 				6D12ADCD2ACD209D00893AA5 /* ExtensionUiView.swift in Sources */,
-				6DCD96BC2AC8A46B0089F811 /* RegisterViewCpntroller.swift in Sources */,
+				6DCD96BC2AC8A46B0089F811 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
