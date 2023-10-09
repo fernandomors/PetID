@@ -9,13 +9,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var ViewPets: UIView!
+    
     @IBOutlet weak var personImage: UIImageView!
     
     @IBOutlet weak var NamePersonLabel: UILabel!
     
     @IBOutlet weak var addPetButton: UIButton!
     
-    @IBOutlet weak var viewPets: UICollectionView!
+    @IBOutlet weak var ViewPetsCollectionView: UICollectionView!
     
     @IBOutlet weak var NamePetLabel: UILabel!
     
@@ -28,24 +30,55 @@ class HomeViewController: UIViewController {
     var listPets: [Pets] = [Pets(name: "Luna", breed: "Golden", image: "Pet01"), 
                             Pets(name: "Garfield", breed: "Gata", image: "Pet02"), 
                             Pets(name: "Spek", breed: "buldog", image: "Pet03")
-                            
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
-        
+        configLabel()
+        configView()
+        configButton()
+        configImage()
     }
     
     func configCollectionView() {
-        viewPets.delegate = self
-        viewPets.dataSource = self
-        viewPets.register(PetsCollectionViewCell.nib(), forCellWithReuseIdentifier: PetsCollectionViewCell.identifier)
+        ViewPetsCollectionView.delegate = self
+        ViewPetsCollectionView.dataSource = self
+        ViewPetsCollectionView.register(PetsCollectionViewCell.nib(), forCellWithReuseIdentifier: PetsCollectionViewCell.identifier)
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = .zero
+        ViewPetsCollectionView.setCollectionViewLayout(layout, animated: true)
+        ViewPetsCollectionView.backgroundColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+    }
+    
+    func configView() {
+        view.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
+        ViewPets.backgroundColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+    }
+    
+    func configButton() {
+        programmedButton.setTitle("Agendadas", for: .normal)
+        programmedButton.tintColor = UIColor.white
+        programmedButton.backgroundColor = UIColor(red: 181/255, green: 145/255, blue: 121/255, alpha: 1.0)
+        programmedButton.layer.cornerRadius = 10
         
+        addPetButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        addPetButton.tintColor = UIColor.white
+    }
+    
+    func configLabel() {
+        NamePersonLabel.text = "Olá, Fernando"
+        NamePersonLabel.textColor = UIColor.white
+    }
+    
+    func configImage() {
+        personImage.image = UIImage(systemName: "person.crop.circle.fill")
+        personImage.tintColor = UIColor.white
     }
     
     @IBAction func tappedAddPetButton(_ sender: UIButton) {
-        let VC = UIStoryboard(name: String(describing: HomeViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as? HomeViewController
+
     }
     
     
@@ -55,7 +88,7 @@ class HomeViewController: UIViewController {
 }
 
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listPets.count
     }
@@ -66,5 +99,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell ?? UICollectionViewCell()
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 80, height: 80)
+    }
     
 }

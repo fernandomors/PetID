@@ -84,7 +84,6 @@ class RegisterViewController: UIViewController {
     }
     
     func configButton() {
-        createAccountButton.tintColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
         createAccountButton.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
         createAccountButton.layer.cornerRadius = 10
         createAccountButton.tintColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)

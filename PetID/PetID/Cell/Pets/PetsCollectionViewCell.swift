@@ -23,6 +23,14 @@ class PetsCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        configImage()
+    }
+    
+    func configImage() {
+        petImage.contentMode = .scaleAspectFill 
+    }
+    
+    func configLabel() {
     }
     
     func setupCell(data: Pets) {
