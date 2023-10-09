@@ -29,6 +29,9 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var googleButton: UIButton!
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,8 +100,6 @@ class LoginViewController: UIViewController {
         resetPasswordButton.setTitle("Redefinir senha", for: .normal)
         
         connectGoogleLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
-        
-        
     }
     
     func validaTextField() {
@@ -116,12 +117,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: String(describing: TabBarController.self), bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController
+        let viewController = UIStoryboard(name: String(describing: TabBarController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarController.self)) as? TabBarController
         navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: "RegisterViewCpntroller", bundle: nil).instantiateViewController(withIdentifier: "RegisterViewCpntroller") as? RegisterViewController
+        let viewController = UIStoryboard(name: String(describing: RegisterViewController.self), bundle: nil).instantiateViewController(withIdentifier: "RegisterViewCpntroller") as? RegisterViewController
         navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
     }
     

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeViewController: ViewController {
-
+class HomeViewController: UIViewController {
+    
     @IBOutlet weak var personImage: UIImageView!
     
     @IBOutlet weak var NamePersonLabel: UILabel!
@@ -28,7 +28,7 @@ class HomeViewController: ViewController {
     var listPets: [Pets] = [Pets(name: "Luna", breed: "Golden", image: "Pet01"), 
                             Pets(name: "Garfield", breed: "Gata", image: "Pet02"), 
                             Pets(name: "Spek", breed: "buldog", image: "Pet03")
-    
+                            
     ]
     
     override func viewDidLoad() {
@@ -44,8 +44,10 @@ class HomeViewController: ViewController {
         
     }
     
-    @IBAction func tappedAddPet(_ sender: UIButton) {
+    @IBAction func tappedAddPetButton(_ sender: UIButton) {
+        let VC = UIStoryboard(name: String(describing: HomeViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as? HomeViewController
     }
+    
     
     @IBAction func tappedProgrammedButton(_ sender: UIButton) {
     }

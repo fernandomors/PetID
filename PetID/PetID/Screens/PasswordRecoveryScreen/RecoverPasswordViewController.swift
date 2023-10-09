@@ -8,7 +8,7 @@
 import UIKit
 
 class RecoverPasswordViewController: UIViewController {
-
+    
     @IBOutlet weak var logoImage: UIImageView!
     
     @IBOutlet weak var recoverPasswordLabel: UILabel!
@@ -27,7 +27,7 @@ class RecoverPasswordViewController: UIViewController {
         configImage()
         configLabel()
         configButton()
-
+        
         
     }
     

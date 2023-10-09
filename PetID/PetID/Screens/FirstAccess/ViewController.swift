@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var description02Label: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configBackground()
