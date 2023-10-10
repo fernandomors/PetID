@@ -152,7 +152,6 @@
 				6DBB6A7B2ACDE65600DC8424 /* Home */,
 				6DC234F62AD4858B00ECA829 /* vaccines */,
 				6DC234FB2AD49F2500ECA829 /* Settings */,
-				6DD363AB2ACE52AC004C7D49 /* RegisteredPets */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -203,6 +202,7 @@
 				6D12ADB72ACCD88200893AA5 /* TabBar */,
 				6D12ADCB2ACD207200893AA5 /* Extension */,
 				6D941E422AD0D46100FE25FB /* Screens */,
+				6DD363AB2ACE52AC004C7D49 /* RegisteredPets */,
 				6DA6E37A2ABCCFEE002412CD /* AppDelegate.swift */,
 				6DA6E37C2ABCCFEE002412CD /* SceneDelegate.swift */,
 				6DA6E3832ABCCFEF002412CD /* Assets.xcassets */,
@@ -310,7 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				6DC235022AD4A0F600ECA829 /* AddVaccines */,
-				6DC235012AD4A0CD00ECA829 /* HasVaccines */,
 				6DC235002AD4A09900ECA829 /* NoVaccines */,
 			);
 			path = vaccines;
@@ -332,13 +331,6 @@
 				6DC234F92AD4860F00ECA829 /* VaccinesViewController.swift */,
 			);
 			path = NoVaccines;
-			sourceTree = "<group>";
-		};
-		6DC235012AD4A0CD00ECA829 /* HasVaccines */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HasVaccines;
 			sourceTree = "<group>";
 		};
 		6DC235022AD4A0F600ECA829 /* AddVaccines */ = {

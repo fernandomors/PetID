@@ -23,12 +23,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var breedPetLabel: UILabel!
     
-    @IBOutlet weak var viewVaccines: UICollectionView!
-    
     @IBOutlet weak var programmedButton: UIButton!
     
-    var listPets: [Pets] = [Pets(name: "Luna", breed: "Golden", image: "Pet01"), 
-                            Pets(name: "Garfield", breed: "Gata", image: "Pet02"), 
+    var listPets: [Pets] = [Pets(name: "Luna", breed: "Golden", image: "Pet01"),
+                            Pets(name: "Garfield", breed: "Gata", image: "Pet02"),
                             Pets(name: "Spek", breed: "buldog", image: "Pet03")
     ]
     
@@ -78,7 +76,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func tappedAddPetButton(_ sender: UIButton) {
-
+        
     }
     
     
@@ -90,7 +88,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listPets.count
+        return listPets.endIndex
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -100,7 +98,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 80, height: 80)
+        return CGSize(width: 100, height: 100)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(listPets[indexPath.row])
+    }
 }

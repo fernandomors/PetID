@@ -8,6 +8,8 @@
 import UIKit
 
 class PetsCollectionViewCell: UICollectionViewCell {
+
+    @IBOutlet weak var viewCollection: UIView!
     
     @IBOutlet weak var petImage: UIImageView!
     
@@ -23,14 +25,24 @@ class PetsCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        configView()
         configImage()
+        configLabel()
+    }
+    
+    func configView() {
+        viewCollection.backgroundColor = UIColor(red: 181/255, green: 145/255, blue: 121/255, alpha: 1.0)
+        viewCollection.layer.cornerRadius = 5
     }
     
     func configImage() {
-        petImage.contentMode = .scaleAspectFill 
+        petImage.contentMode = .scaleAspectFill
+        petImage.layer.cornerRadius = 5
     }
     
     func configLabel() {
+        namePetLabel.font = namePetLabel.font.withSize(12)
+        breedPetLabel.font = breedPetLabel.font.withSize(12)
     }
     
     func setupCell(data: Pets) {
