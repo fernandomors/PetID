@@ -25,14 +25,14 @@ class ViewController: UIViewController {
     
     func configBackground() {
         view.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
+        
+        backgraundView.backgroundColor = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
+        backgraundView.roundCorners(cornerRadiuns: 50, typeCorners: [.SuperiorDireito, .SuperiorEsquerdo
+                                                                    ])
     }
     
     func configImage() {
         accessImage.image = UIImage(named: "accessOne")
-        
-      let corCustomizadaView = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
-        backgraundView.backgroundColor = corCustomizadaView
-        backgraundView.layer.cornerRadius = 50
         
     }
     

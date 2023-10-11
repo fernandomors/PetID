@@ -18,6 +18,10 @@ class VaccinesViewController: UIViewController {
     @IBOutlet weak var descriptionNoVaccinesLabel: UILabel!
     
     @IBOutlet weak var programVaccinesButton: UIButton!
+
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +58,8 @@ class VaccinesViewController: UIViewController {
     }
     
     @IBAction func tappedProgramVaccinesButton(_ sender: UIButton) {
+        let vc = UIStoryboard(name: String(describing: AddVaccinesViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: AddVaccinesViewController.self)) as? AddVaccinesViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
 }

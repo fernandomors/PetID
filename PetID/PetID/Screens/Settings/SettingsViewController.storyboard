@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
@@ -14,20 +14,72 @@
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="PetID" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-gO-dLp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFn-sY-lFR">
+                                        <rect key="frame" x="301" y="28" width="66" height="93"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejc-9Y-Iq6">
+                                        <rect key="frame" x="313" y="129" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2M-Fo-Kdn">
+                                <rect key="frame" x="25" y="242" width="325" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCP-DB-7HD">
+                                <rect key="frame" x="25" y="307" width="325" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXv-HJ-1HD">
+                                <rect key="frame" x="25" y="372" width="325" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eCP-DB-7HD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="3Ae-qH-4P3"/>
+                            <constraint firstItem="k2M-Fo-Kdn" firstAttribute="top" secondItem="IRP-gO-dLp" secondAttribute="bottom" constant="40" id="3BI-qa-QTA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BXv-HJ-1HD" secondAttribute="bottom" constant="260" id="44c-xq-xPQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eCP-DB-7HD" secondAttribute="trailing" constant="25" id="72C-Uw-exM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BXv-HJ-1HD" secondAttribute="trailing" constant="25" id="Bi0-eM-HEI"/>
+                            <constraint firstItem="k2M-Fo-Kdn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="NRZ-SU-WJg"/>
+                            <constraint firstItem="eCP-DB-7HD" firstAttribute="top" secondItem="k2M-Fo-Kdn" secondAttribute="bottom" constant="30" id="Zma-tJ-viA"/>
+                            <constraint firstItem="BXv-HJ-1HD" firstAttribute="top" secondItem="eCP-DB-7HD" secondAttribute="bottom" constant="30" id="Zny-OW-AWx"/>
+                            <constraint firstItem="IRP-gO-dLp" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ce0-lL-nqU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="k2M-Fo-Kdn" secondAttribute="trailing" constant="25" id="ihZ-ts-USv"/>
+                            <constraint firstItem="BXv-HJ-1HD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="oaj-VK-B1W"/>
+                            <constraint firstItem="IRP-gO-dLp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oob-TW-DEG"/>
+                            <constraint firstItem="IRP-gO-dLp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xfp-hC-03h"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="-2"/>
+            <point key="canvasLocation" x="56.799999999999997" y="-2.2488755622188905"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

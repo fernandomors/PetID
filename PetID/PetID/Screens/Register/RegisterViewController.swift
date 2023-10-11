@@ -9,6 +9,8 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    @IBOutlet weak var backButton: UIButton!
+    
     @IBOutlet weak var logoImage: UIImageView!
     
     @IBOutlet weak var createAccountLabel: UILabel!
@@ -89,6 +91,12 @@ class RegisterViewController: UIViewController {
         createAccountButton.tintColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
         createAccountButton.setTitle("Criar conta", for: .normal)
         createAccountButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        
+        backButton.setImage(UIImage(named: "ButtonBack"), for: .normal)
+    }
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func tappedCreateAccountButton(_ sender: UIButton) {

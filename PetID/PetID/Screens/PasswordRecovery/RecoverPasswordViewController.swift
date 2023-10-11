@@ -9,6 +9,8 @@ import UIKit
 
 class RecoverPasswordViewController: UIViewController {
     
+    @IBOutlet weak var backButton: UIButton!
+    
     @IBOutlet weak var logoImage: UIImageView!
     
     @IBOutlet weak var recoverPasswordLabel: UILabel!
@@ -66,6 +68,12 @@ class RecoverPasswordViewController: UIViewController {
         recoverButton.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
         recoverButton.layer.cornerRadius = 10
         
+        backButton.setImage(UIImage(named: "ButtonBack"), for: .normal)
+        
+    }
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func tappedRecoverButton(_ sender: UIButton) {
