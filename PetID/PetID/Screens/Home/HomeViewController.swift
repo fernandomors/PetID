@@ -68,6 +68,14 @@ class HomeViewController: UIViewController {
     func configLabel() {
         NamePersonLabel.text = "Olá, Fernando"
         NamePersonLabel.textColor = UIColor.white
+        
+        NamePetLabel.text = "Luna"
+        NamePetLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+        NamePetLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        breedPetLabel.text = "Golden"
+        breedPetLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+        breedPetLabel.font = UIFont.boldSystemFont(ofSize: 16)
     }
     
     func configImage() {
@@ -102,6 +110,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(listPets[indexPath.row])
+        print(listPets[indexPath.row].name)
     }
 }

@@ -94,7 +94,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8re-XL-1xN">
-                                <rect key="frame" x="25" y="563" width="325" height="35"/>
+                                <rect key="frame" x="25" y="543" width="325" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -127,7 +127,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fsg-3A-TQj" secondAttribute="trailing" constant="25" id="hSr-nM-ZMU"/>
                             <constraint firstItem="CjB-8G-cq4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="kU5-cF-5BA"/>
                             <constraint firstItem="hrY-e1-Vuy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="ocg-qk-bhK"/>
-                            <constraint firstItem="8re-XL-1xN" firstAttribute="top" secondItem="fsg-3A-TQj" secondAttribute="bottom" constant="110" id="p1D-Zh-x1P"/>
+                            <constraint firstItem="8re-XL-1xN" firstAttribute="top" secondItem="fsg-3A-TQj" secondAttribute="bottom" constant="90" id="p1D-Zh-x1P"/>
                             <constraint firstAttribute="trailing" secondItem="4mG-ys-Unl" secondAttribute="trailing" constant="25" id="uGg-Ms-gxr"/>
                             <constraint firstItem="4mG-ys-Unl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="vLE-T2-R44"/>
                             <constraint firstItem="hrY-e1-Vuy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="zJg-IZ-Rwm"/>
