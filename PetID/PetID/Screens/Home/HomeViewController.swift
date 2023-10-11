@@ -22,6 +22,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var NamePetLabel: UILabel!
     
     @IBOutlet weak var breedPetLabel: UILabel!
+  
+    @IBOutlet weak var programmedVaccinationsLabel: UILabel!
+    
+    @IBOutlet weak var programmedVaccinationsCollectionView: UICollectionView!
+    
+    @IBOutlet weak var lastVaccinesLabel: UILabel!
+    
+    @IBOutlet weak var lastVaccinesCollectionView: UICollectionView!
+    
     
     @IBOutlet weak var programmedButton: UIButton!
     
@@ -32,14 +41,14 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configCollectionView()
+        configPetCollectionView()
         configLabel()
         configView()
         configButton()
         configImage()
     }
     
-    func configCollectionView() {
+    func configPetCollectionView() {
         ViewPetsCollectionView.delegate = self
         ViewPetsCollectionView.dataSource = self
         ViewPetsCollectionView.register(PetsCollectionViewCell.nib(), forCellWithReuseIdentifier: PetsCollectionViewCell.identifier)
@@ -48,6 +57,11 @@ class HomeViewController: UIViewController {
         layout.estimatedItemSize = .zero
         ViewPetsCollectionView.setCollectionViewLayout(layout, animated: true)
         ViewPetsCollectionView.backgroundColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+    }
+    
+    func configProgrammedVaccinesCollectionView() {
+        programmedVaccinationsCollectionView.delegate = self
+        programmedVaccinationsCollectionView.dataSource = self
     }
     
     func configView() {
@@ -71,11 +85,19 @@ class HomeViewController: UIViewController {
         
         NamePetLabel.text = "Luna"
         NamePetLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
-        NamePetLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        NamePetLabel.font = UIFont.boldSystemFont(ofSize: 26)
         
         breedPetLabel.text = "Golden"
         breedPetLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
         breedPetLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        programmedVaccinationsLabel.text = "Vacinas agendadas"
+        programmedVaccinationsLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+        programmedVaccinationsLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        lastVaccinesLabel.text = "Últimas vacinas"
+        lastVaccinesLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        lastVaccinesLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
     }
     
     func configImage() {

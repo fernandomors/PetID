@@ -50,8 +50,12 @@ class SettingsViewController: UIViewController {
     
     func configLabel() {
         namePersonLabel.text = "Fernando Mors"
-        namePersonLabel.font = UIFont.systemFont(ofSize: 16)
+        namePersonLabel.font = UIFont.systemFont(ofSize: 20)
         namePersonLabel.textColor = .white
+        
+        SettingsLabel.text = "Ajustes"
+        SettingsLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        SettingsLabel.textColor = .white
     }
     
     func configButton() {
