@@ -10,38 +10,30 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var ViewPets: UIView!
-    
     @IBOutlet weak var personImage: UIImageView!
-    
     @IBOutlet weak var NamePersonLabel: UILabel!
-    
     @IBOutlet weak var addPetButton: UIButton!
-    
     @IBOutlet weak var ViewPetsCollectionView: UICollectionView!
-    
     @IBOutlet weak var NamePetLabel: UILabel!
-    
     @IBOutlet weak var breedPetLabel: UILabel!
-  
     @IBOutlet weak var programmedVaccinationsLabel: UILabel!
-    
     @IBOutlet weak var programmedVaccinationsCollectionView: UICollectionView!
-    
     @IBOutlet weak var lastVaccinesLabel: UILabel!
-    
     @IBOutlet weak var lastVaccinesCollectionView: UICollectionView!
-    
-    
     @IBOutlet weak var programmedButton: UIButton!
     
     var listPets: [Pets] = [Pets(name: "Luna", breed: "Golden", image: "Pet01"),
                             Pets(name: "Garfield", breed: "Gata", image: "Pet02"),
-                            Pets(name: "Spek", breed: "buldog", image: "Pet03")
-    ]
+                            Pets(name: "Spek", breed: "buldog", image: "Pet03"), Pets(name: "Mel", breed: "Viralata", image: "Pet04")]
+    
+    var listVaccinesProgrameed: [ProgrammedVaccinations] = [ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "26/10/2023"),
+                                                            ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "26/10/2023"),
+                                                            ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "26/10/2023")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configPetCollectionView()
+        configProgrammedVaccinesCollectionView()
         configLabel()
         configView()
         configButton()
@@ -62,6 +54,12 @@ class HomeViewController: UIViewController {
     func configProgrammedVaccinesCollectionView() {
         programmedVaccinationsCollectionView.delegate = self
         programmedVaccinationsCollectionView.dataSource = self
+        programmedVaccinationsCollectionView.register(ProgrammedVaccinationCollectionViewCell.nib(), forCellWithReuseIdentifier: ProgrammedVaccinationCollectionViewCell.identifier)
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = .zero
+        programmedVaccinationsCollectionView.setCollectionViewLayout(layout, animated: true)
+        programmedVaccinationsCollectionView.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
     }
     
     func configView() {
@@ -70,7 +68,7 @@ class HomeViewController: UIViewController {
     }
     
     func configButton() {
-        programmedButton.setTitle("Agendadas", for: .normal)
+        programmedButton.setTitle("Agendar", for: .normal)
         programmedButton.tintColor = UIColor.white
         programmedButton.backgroundColor = UIColor(red: 181/255, green: 145/255, blue: 121/255, alpha: 1.0)
         programmedButton.layer.cornerRadius = 10
@@ -89,7 +87,7 @@ class HomeViewController: UIViewController {
         
         breedPetLabel.text = "Golden"
         breedPetLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
-        breedPetLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        breedPetLabel.font = UIFont.systemFont(ofSize: 12)
         
         programmedVaccinationsLabel.text = "Vacinas agendadas"
         programmedVaccinationsLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
@@ -111,6 +109,8 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func tappedProgrammedButton(_ sender: UIButton) {
+        let vc = UIStoryboard(name: String(describing: AddVaccinesViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: AddVaccinesViewController.self)) as? AddVaccinesViewController
+        present(vc ?? UIViewController(), animated: true)
     }
     
 }
@@ -122,13 +122,26 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PetsCollectionViewCell.identifier, for: IndexPath()) as? PetsCollectionViewCell
-        cell?.setupCell(data: listPets[indexPath.row])
-        return cell ?? UICollectionViewCell()
+        if collectionView == ViewPetsCollectionView {
+            let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: PetsCollectionViewCell.identifier, for: IndexPath()) as? PetsCollectionViewCell
+            cell1?.setupCell(data: listPets[indexPath.row])
+            return cell1 ?? UICollectionViewCell()
+        } else if collectionView == programmedVaccinationsCollectionView {
+            let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: ProgrammedVaccinationCollectionViewCell.identifier, for: IndexPath()) as? ProgrammedVaccinationCollectionViewCell
+            cell2?.setupCell(data: listVaccinesProgrameed[indexPath.row])
+            cell2?.layer.cornerRadius = 8
+            return cell2 ?? UICollectionViewCell()
+        }
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
+        if collectionView == ViewPetsCollectionView {
+            return CGSize(width: 100, height: 100)
+        } else if collectionView == programmedVaccinationsCollectionView {
+            return CGSize(width: 150, height: 70)
+        }
+        return CGSize()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

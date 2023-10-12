@@ -9,5 +9,5 @@ import Foundation
 
 struct ProgrammedVaccinations {
     var nameVaccines: String
-    var dateVaccines: Int
+    var dateVaccines: String
 }
