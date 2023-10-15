@@ -60,6 +60,11 @@ class HomeViewController: UIViewController {
         layout.estimatedItemSize = .zero
         programmedVaccinationsCollectionView.setCollectionViewLayout(layout, animated: true)
         programmedVaccinationsCollectionView.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
+        
+        // deixar um espaçamento entre as celulas
+//        layout.minimumInteritemSpacing = 100
+//        
+//        programmedVaccinationsCollectionView.collectionViewLayout = layout
     }
     
     func configView() {
@@ -114,11 +119,9 @@ class HomeViewController: UIViewController {
     }
     
 }
-
-
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listPets.endIndex
+        return listPets.endIndex + listVaccinesProgrameed.endIndex
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -147,4 +150,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(listPets[indexPath.row].name)
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//            // Define o espaçamento horizontal entre as células na mesma linha aqui
+//            return 100
+//        }
 }

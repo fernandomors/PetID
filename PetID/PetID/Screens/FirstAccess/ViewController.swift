@@ -28,7 +28,14 @@ class ViewController: UIViewController {
         
         backgraundView.backgroundColor = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
         backgraundView.layer.cornerRadius = 50
-//        backgraundView.roundCorners(cornerRadiuns: 50, typeCorners: [.SuperiorDireito, .SuperiorEsquerdo])
+        
+        
+        let imageViewContainer = UIView(frame: backgraundView.bounds)
+        imageViewContainer.clipsToBounds = true
+        let imageView = UIImageView(image: UIImage(named: "accessOne"))
+        imageViewContainer.addSubview(imageView)
+        backgraundView.layer.cornerRadius = view.frame.size.width / 10.0
+        backgraundView.layer.masksToBounds = true
     }
     
     func configImage() {
