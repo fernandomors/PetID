@@ -92,7 +92,7 @@
                                     <constraint firstItem="ucR-HO-G2S" firstAttribute="top" secondItem="hAK-uO-vUP" secondAttribute="top" constant="210" id="yT9-6i-4Vf"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yap-Ct-egb">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yap-Ct-egb">
                                 <rect key="frame" x="25" y="748" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="74w-FP-iHa"/>

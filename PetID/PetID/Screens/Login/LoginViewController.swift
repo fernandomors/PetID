@@ -42,7 +42,6 @@ class LoginViewController: UIViewController {
         configLabel()
         configButton()
         validaTextField()
-        
     }
     
     func configDelegate() {
@@ -50,23 +49,31 @@ class LoginViewController: UIViewController {
         passwordTextField.delegate = self
     }
     
+    func TextFieldPattern(textField: UITextField, placeholder: String, cornerRadius: CGFloat, bounds: Bool, isSecure: Bool) {
+        textField.placeholder = placeholder
+        textField.layer.cornerRadius = cornerRadius
+        textField.layer.masksToBounds = bounds
+        textField.isSecureTextEntry = isSecure
+    }
+    
     func configTextField() {
-        emailTextField.placeholder = "Usuário ou email"
-        emailTextField.layer.cornerRadius = 10
-        emailTextField.layer.masksToBounds = true
         
-        passwordTextField.placeholder = "Senha"
-        passwordTextField.layer.cornerRadius = 10
-        passwordTextField.layer.masksToBounds = true
+        TextFieldPattern(textField: emailTextField, placeholder: "Usuário ou email", cornerRadius: 10, bounds: true, isSecure: false)
+        TextFieldPattern(textField: passwordTextField, placeholder: "Senha", cornerRadius: 10, bounds: true, isSecure: true)
+        
+        //        emailTextField.placeholder = "Usuário ou email"
+        //        emailTextField.layer.cornerRadius = 10
+        //        emailTextField.layer.masksToBounds = 10
+        //
+        //        passwordTextField.placeholder = "Senha"
+        //        passwordTextField.layer.cornerRadius = 10
+        //        passwordTextField.layer.masksToBounds = true
     }
     
     func configView() {
-        // Mudei a cor da minha nova view
-        let customCollorView = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
-        backgraundView.backgroundColor = customCollorView
-        // Mudei a cor da minha view (View que vem por defaul)
-        let custoCollorBackgraundView = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
-        view.backgroundColor = custoCollorBackgraundView
+        view.backgroundColor = UIColor.secondary
+        
+        backgraundView.backgroundColor = UIColor.primary
         backgraundView.roundCorners(cornerRadiuns: 80, typeCorners: .InferiorDireito)
     }
     
@@ -79,27 +86,38 @@ class LoginViewController: UIViewController {
         enterLabel.font = UIFont.boldSystemFont(ofSize: 30)
         connectGoogleLabel.text = "ou conecte-se com"
         enterLabel.textColor = .white
+        connectGoogleLabel.textColor = UIColor.TextPrimary
+    }
+    
+    private func ButtonPattern(button: UIButton, title: String, titleColor: UIColor, background: UIColor, radius: CGFloat) {
+        button.setTitle(title, for: .normal)
+        button.backgroundColor = background
+        button.setTitleColor(titleColor, for: .normal)
+        button.layer.cornerRadius = radius 
         
     }
     
     func configButton(){
-        
-        enterButton.setTitle("Entrar", for: .normal)
-        let customCollorButton = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
-        enterButton.backgroundColor = customCollorButton
-        enterButton.setTitleColor(UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0), for: .normal)
-        enterButton.layer.cornerRadius = 10
+        ButtonPattern(button: enterButton, title: "Entrar", titleColor: .TextPrimary , background: .titlePrimary, radius: 10)
+        ButtonPattern(button: registerButton, title: "Registre-se agora", titleColor: .white, background: .clear, radius: 0)
+        ButtonPattern(button: resetPasswordButton, title: "Redefinir senha", titleColor: .white, background: .clear, radius: 0)
         
         
-        registerButton.setTitle("Registre-se agora", for: .normal)
-        registerButton.tintColor = .white
-        //      googleButton.setImage(UIImage(named: "GoogleImage"), for: .normal)
-        //      googleButton.imageView?.contentMode = .scaleToFill
-        //      googleButton.frame = CGSize(width: 30, height: 30)
-        resetPasswordButton.tintColor = .white
-        resetPasswordButton.setTitle("Redefinir senha", for: .normal)
+//        enterButton.setTitle("Entrar", for: .normal)
+//        enterButton.backgroundColor = UIColor.titlePrimary
+//        enterButton.setTitleColor(UIColor.TextPrimary, for: .normal)
+//        enterButton.layer.cornerRadius = 10
+//        
+//        registerButton.setTitle("Registre-se agora", for: .normal)
+//        registerButton.tintColor = .white
+//        
+//        googleButton.setImage(UIImage(named: "GoogleImage"), for: .normal)
+//        googleButton.imageView?.contentMode = .scaleToFill
+//        
+//        googleButton.frame = CGSize(width: 30, height: 30)
+//        resetPasswordButton.tintColor = .white
+//        resetPasswordButton.setTitle("Redefinir senha", for: .normal)
         
-        connectGoogleLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
     }
     
     func validaTextField() {
@@ -112,7 +130,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedResetPasswordButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: "RecoverPasswordViewController", bundle: nil).instantiateViewController(withIdentifier: "RecoverPasswordViewController") as? RecoverPasswordViewController
+        let viewController = UIStoryboard(name: String(describing: RecoverPasswordViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RecoverPasswordViewController.self)) as? RecoverPasswordViewController
         navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
     }
     
@@ -122,7 +140,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: String(describing: RegisterViewController.self), bundle: nil).instantiateViewController(withIdentifier: "RegisterViewCpntroller") as? RegisterViewController
+        let viewController = UIStoryboard(name: String(describing: RegisterViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RegisterViewController.self)) as? RegisterViewController
         navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
     }
     
