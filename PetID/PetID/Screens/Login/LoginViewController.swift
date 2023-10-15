@@ -44,19 +44,19 @@ class LoginViewController: UIViewController {
         validaTextField()
     }
     
-    func configDelegate() {
+    private func configDelegate() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
     
-    func TextFieldPattern(textField: UITextField, placeholder: String, cornerRadius: CGFloat, bounds: Bool, isSecure: Bool) {
+    private func TextFieldPattern(textField: UITextField, placeholder: String, cornerRadius: CGFloat, bounds: Bool, isSecure: Bool) {
         textField.placeholder = placeholder
         textField.layer.cornerRadius = cornerRadius
         textField.layer.masksToBounds = bounds
         textField.isSecureTextEntry = isSecure
     }
     
-    func configTextField() {
+    private func configTextField() {
         
         TextFieldPattern(textField: emailTextField, placeholder: "Usuário ou email", cornerRadius: 10, bounds: true, isSecure: false)
         TextFieldPattern(textField: passwordTextField, placeholder: "Senha", cornerRadius: 10, bounds: true, isSecure: true)
@@ -70,18 +70,18 @@ class LoginViewController: UIViewController {
         //        passwordTextField.layer.masksToBounds = true
     }
     
-    func configView() {
+    private func configView() {
         view.backgroundColor = UIColor.secondary
         
         backgraundView.backgroundColor = UIColor.primary
         backgraundView.roundCorners(cornerRadiuns: 80, typeCorners: .InferiorDireito)
     }
     
-    func configImage() {
+    private func configImage() {
         logoImage.image = UIImage(named: "LogotipoPetIDClear")
     }
     
-    func configLabel() {
+    private func configLabel() {
         enterLabel.text = "Entrar"
         enterLabel.font = UIFont.boldSystemFont(ofSize: 30)
         connectGoogleLabel.text = "ou conecte-se com"
@@ -97,7 +97,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    func configButton(){
+    private func configButton(){
         ButtonPattern(button: enterButton, title: "Entrar", titleColor: .TextPrimary , background: .titlePrimary, radius: 10)
         ButtonPattern(button: registerButton, title: "Registre-se agora", titleColor: .white, background: .clear, radius: 0)
         ButtonPattern(button: resetPasswordButton, title: "Redefinir senha", titleColor: .white, background: .clear, radius: 0)
@@ -113,14 +113,14 @@ class LoginViewController: UIViewController {
 //        
 //        googleButton.setImage(UIImage(named: "GoogleImage"), for: .normal)
 //        googleButton.imageView?.contentMode = .scaleToFill
-//        
+//
 //        googleButton.frame = CGSize(width: 30, height: 30)
 //        resetPasswordButton.tintColor = .white
 //        resetPasswordButton.setTitle("Redefinir senha", for: .normal)
         
     }
     
-    func validaTextField() {
+    private func validaTextField() {
         if emailTextField.text != "" && passwordTextField.text != "" {
             enterButton.isEnabled = true
         } else {
