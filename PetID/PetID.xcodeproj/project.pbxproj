@@ -145,29 +145,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		6D8B0AFC2AD71A0E00FA2E3D /* ProgrammedVaccinations */ = {
-			isa = PBXGroup;
-			children = (
-				6D8B0AFD2AD71A7B00FA2E3D /* ProgrammedVaccinations.swift */,
-			);
-			path = ProgrammedVaccinations;
-			sourceTree = "<group>";
-		};
-		6D8B0AFF2AD71BB400FA2E3D /* LatestVaccinations */ = {
-			isa = PBXGroup;
-			children = (
-				6D8B0B002AD71CC000FA2E3D /* LatestVaccinations.swift */,
-			);
-			path = LatestVaccinations;
-			sourceTree = "<group>";
-		};
-		6D8B0B022AD71CDC00FA2E3D /* LatestVaccinations */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LatestVaccinations;
-			sourceTree = "<group>";
-		};
 		6D8B0B0D2AD74E1900FA2E3D /* ScheduledVaccination */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,9 +253,9 @@
 		6DBB6A802ACDE98800DC8424 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6D8B0AFC2AD71A0E00FA2E3D /* ProgrammedVaccinations */,
-				6D8B0AFF2AD71BB400FA2E3D /* LatestVaccinations */,
-				6DBB6A892ACE275800DC8424 /* Pets */,
+				6D8B0AFD2AD71A7B00FA2E3D /* ProgrammedVaccinations.swift */,
+				6D8B0B002AD71CC000FA2E3D /* LatestVaccinations.swift */,
+				6DBB6A862ACE087900DC8424 /* Pets.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,7 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				6D8B0B0D2AD74E1900FA2E3D /* ScheduledVaccination */,
-				6D8B0B022AD71CDC00FA2E3D /* LatestVaccinations */,
 				6DBB6A882ACE274200DC8424 /* Pets */,
 			);
 			path = Cell;
@@ -298,14 +274,6 @@
 			children = (
 				6DBB6A822ACE05D700DC8424 /* PetsCollectionViewCell.swift */,
 				6DBB6A832ACE05D700DC8424 /* PetsCollectionViewCell.xib */,
-			);
-			path = Pets;
-			sourceTree = "<group>";
-		};
-		6DBB6A892ACE275800DC8424 /* Pets */ = {
-			isa = PBXGroup;
-			children = (
-				6DBB6A862ACE087900DC8424 /* Pets.swift */,
 			);
 			path = Pets;
 			sourceTree = "<group>";
