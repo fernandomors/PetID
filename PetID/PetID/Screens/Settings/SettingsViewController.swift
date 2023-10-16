@@ -25,8 +25,6 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var myPetsButton: UIButton!
     
-    @IBOutlet weak var changeAccountButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +44,7 @@ class SettingsViewController: UIViewController {
     
     func configImage() {
         imagePersonButton.setImage(UIImage(systemName: "person.crop.circle"), for: .normal)
+        imagePersonButton.sizeThatFits(CGSize.init(width: 100, height: 10))
     }
     
     func configLabel() {
@@ -74,10 +73,6 @@ class SettingsViewController: UIViewController {
         myPetsButton.tintColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
         myPetsButton.layer.cornerRadius = 10
         
-        changeAccountButton.setTitle("Editar perfil", for: .normal)
-        changeAccountButton.backgroundColor = UIColor.white
-        changeAccountButton.tintColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
-        changeAccountButton.layer.cornerRadius = 10
     }
     
 }

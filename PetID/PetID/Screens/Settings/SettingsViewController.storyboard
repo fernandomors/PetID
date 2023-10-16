@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-gO-dLp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IFn-sY-lFR">
                                         <rect key="frame" x="300" y="35" width="60" height="80"/>
@@ -28,19 +28,19 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlJ-1U-FWP">
-                                        <rect key="frame" x="140" y="75" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="140" y="77.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4U-eu-LTg">
-                                        <rect key="frame" x="25" y="35" width="100" height="100"/>
+                                        <rect key="frame" x="25" y="40" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="S7p-oV-PPU"/>
                                             <constraint firstAttribute="width" constant="100" id="xQk-sp-s89"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
+                                        <state key="normal" image="square.and.arrow.up" catalog="system"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejc-9Y-Iq6">
                                         <rect key="frame" x="308.5" y="125" width="41.5" height="20.5"/>
@@ -51,7 +51,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <constraints>
-                                    <constraint firstItem="E4U-eu-LTg" firstAttribute="top" secondItem="IRP-gO-dLp" secondAttribute="top" constant="35" id="9us-zD-UE7"/>
+                                    <constraint firstItem="E4U-eu-LTg" firstAttribute="top" secondItem="IRP-gO-dLp" secondAttribute="top" constant="40" id="9us-zD-UE7"/>
                                     <constraint firstItem="PlJ-1U-FWP" firstAttribute="centerY" secondItem="IRP-gO-dLp" secondAttribute="centerY" id="HIH-Ro-xfQ"/>
                                     <constraint firstAttribute="trailing" secondItem="IFn-sY-lFR" secondAttribute="trailing" constant="15" id="HmS-Z4-slK"/>
                                     <constraint firstAttribute="trailing" secondItem="ejc-9Y-Iq6" secondAttribute="trailing" constant="25" id="Wsz-sj-ZG4"/>
@@ -62,8 +62,8 @@
                                     <constraint firstAttribute="bottom" secondItem="E4U-eu-LTg" secondAttribute="bottom" constant="35" id="rEu-oH-K4k"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2M-Fo-Kdn">
-                                <rect key="frame" x="25" y="230" width="325" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2M-Fo-Kdn">
+                                <rect key="frame" x="25" y="235" width="325" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ZcO-oj-qVa"/>
@@ -71,8 +71,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCP-DB-7HD">
-                                <rect key="frame" x="25" y="315" width="325" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCP-DB-7HD">
+                                <rect key="frame" x="25" y="320" width="325" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="D9T-SW-AE4"/>
                                 </constraints>
@@ -80,17 +80,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXv-HJ-1HD">
-                                <rect key="frame" x="25" y="400" width="325" height="45"/>
+                                <rect key="frame" x="25" y="405" width="325" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="2nD-X6-gjs"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDk-j6-oi7">
-                                <rect key="frame" x="25" y="485" width="325" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="K6w-gF-jzy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -102,13 +94,10 @@
                             <constraint firstItem="eCP-DB-7HD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="3Ae-qH-4P3"/>
                             <constraint firstItem="k2M-Fo-Kdn" firstAttribute="top" secondItem="IRP-gO-dLp" secondAttribute="bottom" constant="60" id="3BI-qa-QTA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eCP-DB-7HD" secondAttribute="trailing" constant="25" id="72C-Uw-exM"/>
-                            <constraint firstItem="sDk-j6-oi7" firstAttribute="top" secondItem="BXv-HJ-1HD" secondAttribute="bottom" constant="40" id="75G-Fr-2u3"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sDk-j6-oi7" secondAttribute="trailing" constant="25" id="BHA-Uo-HCU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BXv-HJ-1HD" secondAttribute="trailing" constant="25" id="Bi0-eM-HEI"/>
                             <constraint firstItem="k2M-Fo-Kdn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="NRZ-SU-WJg"/>
                             <constraint firstItem="eCP-DB-7HD" firstAttribute="top" secondItem="k2M-Fo-Kdn" secondAttribute="bottom" constant="40" id="Zma-tJ-viA"/>
                             <constraint firstItem="BXv-HJ-1HD" firstAttribute="top" secondItem="eCP-DB-7HD" secondAttribute="bottom" constant="40" id="Zny-OW-AWx"/>
-                            <constraint firstItem="sDk-j6-oi7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="aWD-zg-l0g"/>
                             <constraint firstItem="IRP-gO-dLp" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ce0-lL-nqU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="k2M-Fo-Kdn" secondAttribute="trailing" constant="25" id="ihZ-ts-USv"/>
                             <constraint firstItem="BXv-HJ-1HD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="oaj-VK-B1W"/>
@@ -118,7 +107,6 @@
                     </view>
                     <connections>
                         <outlet property="SettingsLabel" destination="ejc-9Y-Iq6" id="gGX-Jh-cQf"/>
-                        <outlet property="changeAccountButton" destination="sDk-j6-oi7" id="199-RK-IZt"/>
                         <outlet property="changePasswordButton" destination="eCP-DB-7HD" id="r18-39-Euv"/>
                         <outlet property="editProfileButton" destination="k2M-Fo-Kdn" id="BMv-aM-yag"/>
                         <outlet property="imagePersonButton" destination="E4U-eu-LTg" id="vHK-aR-Ysq"/>
@@ -139,7 +127,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

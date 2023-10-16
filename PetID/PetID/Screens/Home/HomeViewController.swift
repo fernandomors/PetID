@@ -24,11 +24,12 @@ class HomeViewController: UIViewController {
     
     var listPets: [Pets] = [Pets(name: "Luna", breed: "Golden", image: "Pet01"),
                             Pets(name: "Garfield", breed: "Gata", image: "Pet02"),
-                            Pets(name: "Spek", breed: "buldog", image: "Pet03"), Pets(name: "Mel", breed: "Viralata", image: "Pet04")]
+                            Pets(name: "Spek", breed: "buldog", image: "Pet03"), 
+                            Pets(name: "Mel", breed: "Viralata", image: "Pet04")]
     
     var listVaccinesProgrameed: [ProgrammedVaccinations] = [ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "26/10/2023"),
-                                                            ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "26/10/2023"),
-                                                            ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "26/10/2023")]
+                                                            ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "27/10/2023"),
+                                                            ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "28/10/2023")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,7 +122,12 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listPets.endIndex + listVaccinesProgrameed.endIndex
+        if (collectionView == ViewPetsCollectionView) {
+            return listPets.endIndex
+        } else if (collectionView == programmedVaccinationsCollectionView) {
+            return listVaccinesProgrameed.endIndex
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

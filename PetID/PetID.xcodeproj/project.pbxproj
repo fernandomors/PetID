@@ -29,7 +29,6 @@
 		6DBB6A842ACE05D700DC8424 /* PetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB6A822ACE05D700DC8424 /* PetsCollectionViewCell.swift */; };
 		6DBB6A852ACE05D700DC8424 /* PetsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBB6A832ACE05D700DC8424 /* PetsCollectionViewCell.xib */; };
 		6DBB6A872ACE087900DC8424 /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB6A862ACE087900DC8424 /* Pets.swift */; };
-		6DC234ED2AD4788200ECA829 /* UICollor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC234EC2AD4788100ECA829 /* UICollor.swift */; };
 		6DC234F82AD485F600ECA829 /* VaccinesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DC234F72AD485F600ECA829 /* VaccinesViewController.storyboard */; };
 		6DC234FA2AD4860F00ECA829 /* VaccinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC234F92AD4860F00ECA829 /* VaccinesViewController.swift */; };
 		6DC234FD2AD49F4A00ECA829 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DC234FC2AD49F4A00ECA829 /* SettingsViewController.storyboard */; };
@@ -89,7 +88,6 @@
 		6DBB6A822ACE05D700DC8424 /* PetsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewCell.swift; sourceTree = "<group>"; };
 		6DBB6A832ACE05D700DC8424 /* PetsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetsCollectionViewCell.xib; sourceTree = "<group>"; };
 		6DBB6A862ACE087900DC8424 /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
-		6DC234EC2AD4788100ECA829 /* UICollor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollor.swift; sourceTree = "<group>"; };
 		6DC234F72AD485F600ECA829 /* VaccinesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VaccinesViewController.storyboard; sourceTree = "<group>"; };
 		6DC234F92AD4860F00ECA829 /* VaccinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinesViewController.swift; sourceTree = "<group>"; };
 		6DC234FC2AD49F4A00ECA829 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 		6D12ADCB2ACD207200893AA5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				6DC234EB2AD4786200ECA829 /* UICollor */,
 				6DC234EA2AD4784200ECA829 /* CornerRadiuns */,
 			);
 			path = Extension;
@@ -319,14 +316,6 @@
 				6D12ADCC2ACD209D00893AA5 /* ExtensionUiView.swift */,
 			);
 			path = CornerRadiuns;
-			sourceTree = "<group>";
-		};
-		6DC234EB2AD4786200ECA829 /* UICollor */ = {
-			isa = PBXGroup;
-			children = (
-				6DC234EC2AD4788100ECA829 /* UICollor.swift */,
-			);
-			path = UICollor;
 			sourceTree = "<group>";
 		};
 		6DC234F62AD4858B00ECA829 /* vaccines */ = {
@@ -548,7 +537,6 @@
 				6DD1F8992AC49F8B007FEC1A /* LoginViewController.swift in Sources */,
 				6D8B0AFE2AD71A7B00FA2E3D /* ProgrammedVaccinations.swift in Sources */,
 				6DC234FA2AD4860F00ECA829 /* VaccinesViewController.swift in Sources */,
-				6DC234ED2AD4788200ECA829 /* UICollor.swift in Sources */,
 				6D8B0B012AD71CC000FA2E3D /* LatestVaccinations.swift in Sources */,
 				6DD363AF2ACE530B004C7D49 /* RegisteredPetsViewController.swift in Sources */,
 				6DBB6A842ACE05D700DC8424 /* PetsCollectionViewCell.swift in Sources */,
