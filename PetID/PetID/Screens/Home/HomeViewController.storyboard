@@ -165,8 +165,12 @@
                         <outlet property="ViewPetsCollectionView" destination="P1W-fZ-jsw" id="hKV-P5-xuU"/>
                         <outlet property="addPetButton" destination="qyz-H8-G3a" id="VgI-Qb-dIm"/>
                         <outlet property="breedPetLabel" destination="bwh-bY-J18" id="xiK-Ta-2FW"/>
+                        <outlet property="lastVaccinesCollectionView" destination="y2O-mu-8pa" id="bes-uG-e0l"/>
+                        <outlet property="lastVaccinesLabel" destination="sxO-4u-J3h" id="KzA-NQ-LU1"/>
                         <outlet property="personImage" destination="mK6-C4-hbq" id="drT-ma-Ex6"/>
                         <outlet property="programmedButton" destination="iGe-p4-bwd" id="inx-7A-PsY"/>
+                        <outlet property="programmedVaccinationsCollectionView" destination="46I-6j-tg7" id="ROX-hJ-XJE"/>
+                        <outlet property="programmedVaccinationsLabel" destination="7aI-b6-bsv" id="JYM-WV-nEN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -181,7 +185,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

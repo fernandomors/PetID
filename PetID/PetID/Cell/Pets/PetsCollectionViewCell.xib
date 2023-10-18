@@ -22,13 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xs3-Tp-Mgc">
-                                <rect key="frame" x="5" y="75" width="41.333333333333336" height="20.333333333333329"/>
+                                <rect key="frame" x="5" y="78" width="41.333333333333336" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDv-Xz-AhH">
-                                <rect key="frame" x="53.666666666666657" y="75" width="41.333333333333343" height="20.333333333333329"/>
+                                <rect key="frame" x="53.666666666666657" y="78" width="41.333333333333343" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,11 +45,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VDv-Xz-AhH" secondAttribute="trailing" constant="5" id="2Ya-Sr-tuN"/>
                             <constraint firstAttribute="trailing" secondItem="Qgg-hk-1wg" secondAttribute="trailing" constant="5" id="7KX-vP-GlM"/>
-                            <constraint firstItem="Xs3-Tp-Mgc" firstAttribute="top" secondItem="Qgg-hk-1wg" secondAttribute="bottom" id="MDK-65-YzD"/>
+                            <constraint firstItem="Xs3-Tp-Mgc" firstAttribute="top" secondItem="Qgg-hk-1wg" secondAttribute="bottom" constant="3" id="MDK-65-YzD"/>
                             <constraint firstItem="Qgg-hk-1wg" firstAttribute="leading" secondItem="gna-X6-cih" secondAttribute="leading" constant="5" id="WLk-Zw-4Bu"/>
                             <constraint firstItem="Qgg-hk-1wg" firstAttribute="top" secondItem="gna-X6-cih" secondAttribute="top" constant="5" id="cgL-el-ojr"/>
                             <constraint firstItem="Xs3-Tp-Mgc" firstAttribute="leading" secondItem="gna-X6-cih" secondAttribute="leading" constant="5" id="qHK-QV-uEb"/>
-                            <constraint firstItem="VDv-Xz-AhH" firstAttribute="top" secondItem="Qgg-hk-1wg" secondAttribute="bottom" id="tD7-vy-WZX"/>
+                            <constraint firstItem="VDv-Xz-AhH" firstAttribute="top" secondItem="Qgg-hk-1wg" secondAttribute="bottom" constant="3" id="tD7-vy-WZX"/>
                         </constraints>
                     </view>
                 </subviews>

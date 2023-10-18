@@ -27,8 +27,16 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
         
         backgraundView.backgroundColor = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
-        backgraundView.roundCorners(cornerRadiuns: 50, typeCorners: [.SuperiorDireito, .SuperiorEsquerdo
-                                                                    ])
+        backgraundView.layer.cornerRadius = 50
+        
+        
+        let imageViewContainer = UIView(frame: backgraundView.bounds)
+        imageViewContainer.clipsToBounds = true
+        let imageView = UIImageView(image: UIImage(named: "accessOne"))
+        imageViewContainer.addSubview(imageView)
+        backgraundView.layer.cornerRadius = view.frame.size.width / 10.0
+        backgraundView.layer.masksToBounds = true
+        backgraundView.clipsToBounds = false
     }
     
     func configImage() {
@@ -46,7 +54,7 @@ class ViewController: UIViewController {
         description02Label.font = UIFont.systemFont(ofSize: 30, weight: .light)
         description02Label.textColor = UIColor.white
         description02Label.numberOfLines = 0
-    
+        
     }
     
     func configButton() {

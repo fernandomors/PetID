@@ -59,7 +59,7 @@ class VaccinesViewController: UIViewController {
     
     @IBAction func tappedProgramVaccinesButton(_ sender: UIButton) {
         let vc = UIStoryboard(name: String(describing: AddVaccinesViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: AddVaccinesViewController.self)) as? AddVaccinesViewController
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        present(vc ?? UIViewController(), animated: true)
     }
     
 }
