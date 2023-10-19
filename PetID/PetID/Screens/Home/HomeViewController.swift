@@ -110,7 +110,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func tappedAddPetButton(_ sender: UIButton) {
-        
+        let vc = UIStoryboard(name: String(describing: AddPetViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: AddPetViewController.self)) as? AddPetViewController
+        present(vc ?? ViewController(), animated: true)
     }
     
     

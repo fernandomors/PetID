@@ -60,14 +60,6 @@ class LoginViewController: UIViewController {
         
         TextFieldPattern(textField: emailTextField, placeholder: "Usuário ou email", cornerRadius: 10, bounds: true, isSecure: false)
         TextFieldPattern(textField: passwordTextField, placeholder: "Senha", cornerRadius: 10, bounds: true, isSecure: true)
-        
-        //        emailTextField.placeholder = "Usuário ou email"
-        //        emailTextField.layer.cornerRadius = 10
-        //        emailTextField.layer.masksToBounds = 10
-        //
-        //        passwordTextField.placeholder = "Senha"
-        //        passwordTextField.layer.cornerRadius = 10
-        //        passwordTextField.layer.masksToBounds = true
     }
     
     private func configView() {
@@ -101,22 +93,6 @@ class LoginViewController: UIViewController {
         ButtonPattern(button: enterButton, title: "Entrar", titleColor: .TextPrimary , background: .titlePrimary, radius: 10)
         ButtonPattern(button: registerButton, title: "Registre-se agora", titleColor: .white, background: .clear, radius: 0)
         ButtonPattern(button: resetPasswordButton, title: "Redefinir senha", titleColor: .white, background: .clear, radius: 0)
-        
-        
-//        enterButton.setTitle("Entrar", for: .normal)
-//        enterButton.backgroundColor = UIColor.titlePrimary
-//        enterButton.setTitleColor(UIColor.TextPrimary, for: .normal)
-//        enterButton.layer.cornerRadius = 10
-//        
-//        registerButton.setTitle("Registre-se agora", for: .normal)
-//        registerButton.tintColor = .white
-//        
-//        googleButton.setImage(UIImage(named: "GoogleImage"), for: .normal)
-//        googleButton.imageView?.contentMode = .scaleToFill
-//
-//        googleButton.frame = CGSize(width: 30, height: 30)
-//        resetPasswordButton.tintColor = .white
-//        resetPasswordButton.setTitle("Redefinir senha", for: .normal)
         
     }
     

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Pet View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddPetViewController" id="Y6W-OH-hqX" customClass="AddPetViewController" customModule="PetID" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hm9-Ra-a1W">
+                                <rect key="frame" x="20" y="175" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-op-RVd">
+                                <rect key="frame" x="25" y="221" width="325" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="llT-5b-x2c">
+                                <rect key="frame" x="25" y="280" width="325" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1J-fI-gk2">
+                                <rect key="frame" x="25" y="339" width="325" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KF-kI-gIE">
+                                <rect key="frame" x="142.5" y="60" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="H4S-fq-HfA"/>
+                                    <constraint firstAttribute="width" constant="90" id="k5J-rG-TQD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="pawprint.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single" variableValue="0.0">
+                                        <hierarchicalColors>
+                                            <color systemColor="systemBrownColor"/>
+                                            <color systemColor="secondaryLabelColor"/>
+                                            <color systemColor="tertiaryLabelColor"/>
+                                        </hierarchicalColors>
+                                    </imageReference>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="60" weight="black"/>
+                                </state>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kd4-1m-ID3">
+                                <rect key="frame" x="25" y="398" width="325" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tappedPetSizeSegmentedControl:" destination="Y6W-OH-hqX" eventType="valueChanged" id="igH-HF-PkU"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-bn-d5t">
+                                <rect key="frame" x="23" y="454" width="329" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoP-F7-DVx">
+                                <rect key="frame" x="25" y="544" width="325" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kd4-1m-ID3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="0xG-Dw-mte"/>
+                            <constraint firstItem="sf2-bn-d5t" firstAttribute="top" secondItem="kd4-1m-ID3" secondAttribute="bottom" constant="25" id="17c-hY-MwW"/>
+                            <constraint firstItem="a1J-fI-gk2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="2Ov-oX-zsJ"/>
+                            <constraint firstItem="kd4-1m-ID3" firstAttribute="top" secondItem="a1J-fI-gk2" secondAttribute="bottom" constant="25" id="51u-zb-qNd"/>
+                            <constraint firstItem="sf2-bn-d5t" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="8JM-sQ-yIN"/>
+                            <constraint firstItem="a1J-fI-gk2" firstAttribute="top" secondItem="llT-5b-x2c" secondAttribute="bottom" constant="25" id="B6a-oz-oEE"/>
+                            <constraint firstItem="K5h-op-RVd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="FVv-It-QWz"/>
+                            <constraint firstItem="GoP-F7-DVx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="Oj4-cb-Sxz"/>
+                            <constraint firstItem="llT-5b-x2c" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="Suh-1A-PVa"/>
+                            <constraint firstItem="GoP-F7-DVx" firstAttribute="top" secondItem="sf2-bn-d5t" secondAttribute="bottom" constant="60" id="TOY-Pe-Yxm"/>
+                            <constraint firstItem="1KF-kI-gIE" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WkB-9e-aWf"/>
+                            <constraint firstItem="1KF-kI-gIE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="XkW-sb-weg"/>
+                            <constraint firstItem="K5h-op-RVd" firstAttribute="top" secondItem="Hm9-Ra-a1W" secondAttribute="bottom" constant="25" id="agC-hH-Uy5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kd4-1m-ID3" secondAttribute="trailing" constant="25" id="eLA-sC-ebg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sf2-bn-d5t" secondAttribute="trailing" constant="25" id="fyY-cw-XLA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="llT-5b-x2c" secondAttribute="trailing" constant="25" id="gvx-iW-Khb"/>
+                            <constraint firstItem="Hm9-Ra-a1W" firstAttribute="top" secondItem="1KF-kI-gIE" secondAttribute="bottom" constant="25" id="ppS-6L-D9T"/>
+                            <constraint firstItem="llT-5b-x2c" firstAttribute="top" secondItem="K5h-op-RVd" secondAttribute="bottom" constant="25" id="qMp-J5-uyD"/>
+                            <constraint firstItem="Hm9-Ra-a1W" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="wUA-Ix-3bB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K5h-op-RVd" secondAttribute="trailing" constant="25" id="xb1-w6-VTA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="a1J-fI-gk2" secondAttribute="trailing" constant="25" id="ySs-ZA-TrL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GoP-F7-DVx" secondAttribute="trailing" constant="25" id="yxw-Op-LHS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="breedPetTextField" destination="llT-5b-x2c" id="llp-Zp-4UZ"/>
+                        <outlet property="kgPetSlider" destination="sf2-bn-d5t" id="psZ-hR-4sg"/>
+                        <outlet property="namePetTextField" destination="K5h-op-RVd" id="waG-w9-cSw"/>
+                        <outlet property="petPhotoButton" destination="1KF-kI-gIE" id="5ZK-pr-kxS"/>
+                        <outlet property="petSizeSegmentedControl" destination="kd4-1m-ID3" id="CAI-hE-eju"/>
+                        <outlet property="registerPetButton" destination="GoP-F7-DVx" id="inh-7y-PIe"/>
+                        <outlet property="registerPetLabel" destination="Hm9-Ra-a1W" id="cx5-Ee-nXV"/>
+                        <outlet property="sexPetTextField" destination="a1J-fI-gk2" id="628-ho-uVU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122.40000000000001" y="-2.2488755622188905"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pawprint.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
