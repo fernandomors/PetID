@@ -56,6 +56,7 @@ class HomeViewController: UIViewController {
         layout.estimatedItemSize = .zero
         ViewPetsCollectionView.setCollectionViewLayout(layout, animated: true)
         ViewPetsCollectionView.backgroundColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+        ViewPetsCollectionView.showsHorizontalScrollIndicator = false
     }
     
     func configProgrammedVaccinesCollectionView() {
@@ -67,6 +68,7 @@ class HomeViewController: UIViewController {
         layout.estimatedItemSize = .zero
         programmedVaccinationsCollectionView.setCollectionViewLayout(layout, animated: true)
         programmedVaccinationsCollectionView.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
+        programmedVaccinationsCollectionView.showsHorizontalScrollIndicator = false
         
         // deixar um espaçamento entre as celulas
 //        layout.minimumInteritemSpacing = 100
@@ -83,6 +85,8 @@ class HomeViewController: UIViewController {
         layout.estimatedItemSize = .zero
         lastVaccinesCollectionView.setCollectionViewLayout(layout, animated: true)
         lastVaccinesCollectionView.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
+        lastVaccinesCollectionView.showsHorizontalScrollIndicator = false
+
         
     }
     

@@ -71,7 +71,7 @@ class AddPetViewController: UIViewController {
     }
     
     func configButton() {
-        petPhotoButton.setImage(UIImage(systemName: "pawprint.circle.fill"), for: .normal)
+        petPhotoButton.setImage(UIImage(named: "PetProfile"), for: .normal)
         petPhotoButton.tintColor = UIColor.secondary
         
         registerPetButton.setTitle("Cadastrar pet", for: .normal)

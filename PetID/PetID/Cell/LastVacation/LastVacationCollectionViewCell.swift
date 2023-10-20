@@ -29,6 +29,9 @@ class LastVacationCollectionViewCell: UICollectionViewCell {
         editImage.image = UIImage(systemName: "pencil")
         editImage.frame.size = CGSize(width: 5, height: 5)
         editImage.tintColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+        
+        checkVaccinesImage.image = UIImage(named: "Check")
+        
     }
     
     func configLabel() {

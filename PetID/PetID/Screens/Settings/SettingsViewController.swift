@@ -10,19 +10,12 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var viewSettingsView: UIView!
-    
     @IBOutlet weak var imagePersonButton: UIButton!
-    
     @IBOutlet weak var namePersonLabel: UILabel!
-    
     @IBOutlet weak var logoImage: UIImageView!
-    
     @IBOutlet weak var SettingsLabel: UILabel!
-    
     @IBOutlet weak var editProfileButton: UIButton!
-    
     @IBOutlet weak var changePasswordButton: UIButton!
-    
     @IBOutlet weak var myPetsButton: UIButton!
     
     
@@ -43,19 +36,23 @@ class SettingsViewController: UIViewController {
     }
     
     func configImage() {
-        imagePersonButton.setImage(UIImage(systemName: "person.crop.circle"), for: .normal)
-        imagePersonButton.sizeThatFits(CGSize.init(width: 100, height: 10))
+        imagePersonButton.setImage(UIImage(named: "PersonProfile"), for: .normal)
+        imagePersonButton.imageView?.sizeThatFits(CGSize.init(width: 100, height: 100))
+        
+        logoImage.image = UIImage(named: "LogoP")
     }
     
     func configLabel() {
         namePersonLabel.text = "Fernando Mors"
-        namePersonLabel.font = UIFont.systemFont(ofSize: 20)
         namePersonLabel.textColor = .white
+        namePersonLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         
         SettingsLabel.text = "Ajustes"
-        SettingsLabel.font = UIFont.boldSystemFont(ofSize: 20)
         SettingsLabel.textColor = .white
+        SettingsLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
     }
+    
+    
     
     func configButton() {
         editProfileButton.setTitle("Editar perfil", for: .normal)
