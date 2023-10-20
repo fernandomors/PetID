@@ -8,16 +8,19 @@
 import UIKit
 
 class AddPetViewController: UIViewController {
-
+    
     @IBOutlet weak var petPhotoButton: UIButton!
     @IBOutlet weak var registerPetLabel: UILabel!
     @IBOutlet weak var namePetTextField: UITextField!
     @IBOutlet weak var breedPetTextField: UITextField!
     @IBOutlet weak var sexPetTextField: UITextField!
     @IBOutlet weak var petSizeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var numberKilosLabel: UILabel!
     @IBOutlet weak var kgPetSlider: UISlider!
+    @IBOutlet weak var kgLabel: UILabel!
     @IBOutlet weak var registerPetButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configDelegate()
@@ -53,18 +56,38 @@ class AddPetViewController: UIViewController {
         view.backgroundColor = UIColor.primary
     }
     
+    private func labelPattern(label: UILabel, text: String, textColor: UIColor, font: UIFont) {
+        label.text = text
+        label.textColor = textColor
+        label.font = font
+    }
+    
     func configLabel() {
-        registerPetLabel.text = "Cadastrar pet"
-        registerPetLabel.textColor = UIColor.secondary
-        registerPetLabel.numberOfLines = 0
+        labelPattern(label: registerPetLabel, text: "Cadastrar", textColor: UIColor.secondary, font: UIFont.systemFont(ofSize: 22, weight: .semibold))
+        labelPattern(label: weightLabel, text: "Peso", textColor: UIColor.secondary, font: UIFont.systemFont(ofSize: 22, weight: .semibold))
+        
+        labelPattern(label: numberKilosLabel, text: "0", textColor: UIColor.secondary, font: UIFont.systemFont(ofSize: 16, weight: .semibold))
+        labelPattern(label: kgLabel, text: "kg", textColor: UIColor.secondary, font: UIFont.systemFont(ofSize: 16, weight: .semibold))
     }
     
     func configButton() {
         petPhotoButton.setImage(UIImage(systemName: "pawprint.circle.fill"), for: .normal)
         petPhotoButton.tintColor = UIColor.secondary
+        
+        registerPetButton.setTitle("Cadastrar pet", for: .normal)
+        registerPetButton.setTitleColor(UIColor.TextPrimary, for: .normal)
+        registerPetButton.backgroundColor = UIColor.secondary
+        registerPetButton.layer.cornerRadius = 10
+        
     }
     
     func configSlider() {
+        kgPetSlider.minimumValue = 0
+        kgPetSlider.value = 5
+        kgPetSlider.maximumValue = 40
+        kgPetSlider.minimumTrackTintColor = UIColor.secondary
+        kgPetSlider.thumbTintColor = UIColor.TextPrimary
+        kgPetSlider.maximumTrackTintColor = UIColor.secondary
         
     }
     
@@ -72,14 +95,24 @@ class AddPetViewController: UIViewController {
         petSizeSegmentedControl.setTitle("Pequeno", forSegmentAt: 0)
         petSizeSegmentedControl.setTitle("Médio", forSegmentAt: 1)
         petSizeSegmentedControl.insertSegment(withTitle: "Grande", at: 2, animated: true)
-        
         petSizeSegmentedControl.backgroundColor = UIColor.secondary
         petSizeSegmentedControl.selectedSegmentTintColor = UIColor.TextPrimary
         
+        
+        let normalTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.TextPrimary]
+        let selectedTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.secondary]
+        
+        petSizeSegmentedControl.setTitleTextAttributes(normalTextAttributes, for: .normal)
+        petSizeSegmentedControl.setTitleTextAttributes(selectedTextAttributes, for: .selected)
+        
     }
-
+    
+    @IBAction func tappedKgPetSlider(_ sender: UISlider) {
+        numberKilosLabel.text = String(Int(sender.value))
+    }
+    
     @IBAction func tappedPetSizeSegmentedControl(_ sender: UISegmentedControl) {
-      
+        
     }
     
 }

@@ -43,7 +43,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyz-H8-G3a">
-                                        <rect key="frame" x="325" y="60" width="40" height="40"/>
+                                        <rect key="frame" x="320" y="60" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="f3G-36-4g7"/>
                                             <constraint firstAttribute="height" constant="40" id="s7C-Xt-C7c"/>
@@ -72,7 +72,7 @@
                                     <constraint firstItem="Dv6-ow-lhe" firstAttribute="leading" secondItem="mK6-C4-hbq" secondAttribute="trailing" constant="10" id="b3u-M8-icW"/>
                                     <constraint firstAttribute="height" constant="219" id="dVD-9J-QkI"/>
                                     <constraint firstAttribute="width" constant="375" id="fDr-IW-Xck"/>
-                                    <constraint firstAttribute="trailing" secondItem="qyz-H8-G3a" secondAttribute="trailing" constant="10" id="lLe-vN-ybb"/>
+                                    <constraint firstAttribute="trailing" secondItem="qyz-H8-G3a" secondAttribute="trailing" constant="15" id="lLe-vN-ybb"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0t-oE-Lzw">

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6D12ADB92ACCD8A600893AA5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D12ADB82ACCD8A600893AA5 /* TabBarController.swift */; };
 		6D12ADCD2ACD209D00893AA5 /* ExtensionUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D12ADCC2ACD209D00893AA5 /* ExtensionUiView.swift */; };
+		6D4999912AE1DAC200805B15 /* LastVacation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4999902AE1DAC200805B15 /* LastVacation.swift */; };
+		6D4999952AE1DC7200805B15 /* LastVacationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4999932AE1DC7200805B15 /* LastVacationCollectionViewCell.swift */; };
+		6D4999962AE1DC7200805B15 /* LastVacationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D4999942AE1DC7200805B15 /* LastVacationCollectionViewCell.xib */; };
 		6D628D5B2ADF5C7C0087AD53 /* ProgrammedVaccinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D628D592ADF5C7C0087AD53 /* ProgrammedVaccinations.swift */; };
 		6D628D5C2ADF5C7C0087AD53 /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D628D5A2ADF5C7C0087AD53 /* Pets.swift */; };
 		6D628D5F2ADF5CB90087AD53 /* ProgrammedVaccinationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D628D5D2ADF5CB90087AD53 /* ProgrammedVaccinationCollectionViewCell.xib */; };
@@ -36,6 +39,7 @@
 		6DC234FF2AD49F6100ECA829 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC234FE2AD49F6100ECA829 /* SettingsViewController.swift */; };
 		6DCD96BA2AC8A45C0089F811 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD96B92AC8A45C0089F811 /* RegisterViewController.storyboard */; };
 		6DCD96BC2AC8A46B0089F811 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCD96BB2AC8A46B0089F811 /* RegisterViewController.swift */; };
+		6DCF55A52AE2D8A400A38C25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DCF55A42AE2D8A400A38C25 /* GoogleService-Info.plist */; };
 		6DD1F8972AC49F70007FEC1A /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD1F8962AC49F70007FEC1A /* LoginViewController.storyboard */; };
 		6DD1F8992AC49F8B007FEC1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1F8982AC49F8B007FEC1A /* LoginViewController.swift */; };
 		6DD363AF2ACE530B004C7D49 /* RegisteredPetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD363AE2ACE530B004C7D49 /* RegisteredPetsViewController.swift */; };
@@ -66,6 +70,9 @@
 /* Begin PBXFileReference section */
 		6D12ADB82ACCD8A600893AA5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6D12ADCC2ACD209D00893AA5 /* ExtensionUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUiView.swift; sourceTree = "<group>"; };
+		6D4999902AE1DAC200805B15 /* LastVacation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastVacation.swift; sourceTree = "<group>"; };
+		6D4999932AE1DC7200805B15 /* LastVacationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastVacationCollectionViewCell.swift; sourceTree = "<group>"; };
+		6D4999942AE1DC7200805B15 /* LastVacationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastVacationCollectionViewCell.xib; sourceTree = "<group>"; };
 		6D628D592ADF5C7C0087AD53 /* ProgrammedVaccinations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammedVaccinations.swift; sourceTree = "<group>"; };
 		6D628D5A2ADF5C7C0087AD53 /* Pets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
 		6D628D5D2ADF5CB90087AD53 /* ProgrammedVaccinationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgrammedVaccinationCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -97,6 +104,7 @@
 		6DC234FE2AD49F6100ECA829 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6DCD96B92AC8A45C0089F811 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
 		6DCD96BB2AC8A46B0089F811 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6DCF55A42AE2D8A400A38C25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6DD1F8962AC49F70007FEC1A /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		6DD1F8982AC49F8B007FEC1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6DD363AE2ACE530B004C7D49 /* RegisteredPetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +156,15 @@
 				C40CDAA92ADC7F4A00A752EF /* Extension+UIColor.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		6D4999922AE1DBF100805B15 /* LastVacation */ = {
+			isa = PBXGroup;
+			children = (
+				6D4999932AE1DC7200805B15 /* LastVacationCollectionViewCell.swift */,
+				6D4999942AE1DC7200805B15 /* LastVacationCollectionViewCell.xib */,
+			);
+			path = LastVacation;
 			sourceTree = "<group>";
 		};
 		6D628D612AE035660087AD53 /* ProgrammedVaccination */ = {
@@ -252,6 +269,7 @@
 			children = (
 				6DA6E39B2ABCCFEF002412CD /* PetIDUITests.swift */,
 				6DA6E39D2ABCCFEF002412CD /* PetIDUITestsLaunchTests.swift */,
+				6DCF55A42AE2D8A400A38C25 /* GoogleService-Info.plist */,
 			);
 			path = PetIDUITests;
 			sourceTree = "<group>";
@@ -270,6 +288,7 @@
 			children = (
 				6D628D5A2ADF5C7C0087AD53 /* Pets.swift */,
 				6D628D592ADF5C7C0087AD53 /* ProgrammedVaccinations.swift */,
+				6D4999902AE1DAC200805B15 /* LastVacation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +296,7 @@
 		6DBB6A812ACDE99000DC8424 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				6D4999922AE1DBF100805B15 /* LastVacation */,
 				6D628D612AE035660087AD53 /* ProgrammedVaccination */,
 				6DBB6A882ACE274200DC8424 /* Pets */,
 			);
@@ -486,10 +506,12 @@
 				6DCD96BA2AC8A45C0089F811 /* RegisterViewController.storyboard in Resources */,
 				6DA6E3842ABCCFEF002412CD /* Assets.xcassets in Resources */,
 				6DBB6A852ACE05D700DC8424 /* PetsCollectionViewCell.xib in Resources */,
+				6DCF55A52AE2D8A400A38C25 /* GoogleService-Info.plist in Resources */,
 				6DC234F82AD485F600ECA829 /* VaccinesViewController.storyboard in Resources */,
 				6DC234FD2AD49F4A00ECA829 /* SettingsViewController.storyboard in Resources */,
 				6DA6E3822ABCCFEE002412CD /* Main.storyboard in Resources */,
 				6D628D642AE036480087AD53 /* AddPetViewController.storyboard in Resources */,
+				6D4999962AE1DC7200805B15 /* LastVacationCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D4999952AE1DC7200805B15 /* LastVacationCollectionViewCell.swift in Sources */,
 				6DFB43E82AD59B84000CCE3D /* AddVaccinesViewController.swift in Sources */,
 				6D94E4D52ACCAD43004D53E6 /* RecoverPasswordViewController.swift in Sources */,
 				6DD1F8992AC49F8B007FEC1A /* LoginViewController.swift in Sources */,
@@ -527,6 +550,7 @@
 				6D628D5C2ADF5C7C0087AD53 /* Pets.swift in Sources */,
 				C40CDAAA2ADC7F4A00A752EF /* Extension+UIColor.swift in Sources */,
 				6D628D602ADF5CB90087AD53 /* ProgrammedVaccinationCollectionViewCell.swift in Sources */,
+				6D4999912AE1DAC200805B15 /* LastVacation.swift in Sources */,
 				6DBB6A7F2ACDE69E00DC8424 /* HomeViewController.swift in Sources */,
 				6D628D662AE0365F0087AD53 /* AddPetViewController.swift in Sources */,
 				6DC234FF2AD49F6100ECA829 /* SettingsViewController.swift in Sources */,

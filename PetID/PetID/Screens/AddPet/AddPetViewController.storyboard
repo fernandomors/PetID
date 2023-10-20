@@ -69,50 +69,80 @@
                                 </connections>
                             </segmentedControl>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-bn-d5t">
-                                <rect key="frame" x="23" y="454" width="329" height="31"/>
+                                <rect key="frame" x="23" y="470" width="291" height="31"/>
+                                <connections>
+                                    <action selector="tappedKgPetSlider:" destination="Y6W-OH-hqX" eventType="valueChanged" id="dMZ-0g-W86"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoP-F7-DVx">
-                                <rect key="frame" x="25" y="544" width="325" height="35"/>
+                                <rect key="frame" x="25" y="550" width="325" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rJ-49-mHq">
+                                <rect key="frame" x="25" y="449" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsl-Lp-wH9">
+                                <rect key="frame" x="317" y="459" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyZ-3K-4ZX">
+                                <rect key="frame" x="317" y="480" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kd4-1m-ID3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="0xG-Dw-mte"/>
-                            <constraint firstItem="sf2-bn-d5t" firstAttribute="top" secondItem="kd4-1m-ID3" secondAttribute="bottom" constant="25" id="17c-hY-MwW"/>
                             <constraint firstItem="a1J-fI-gk2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="2Ov-oX-zsJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Dsl-Lp-wH9" secondAttribute="trailing" constant="16" id="4h6-ly-JN3"/>
                             <constraint firstItem="kd4-1m-ID3" firstAttribute="top" secondItem="a1J-fI-gk2" secondAttribute="bottom" constant="25" id="51u-zb-qNd"/>
                             <constraint firstItem="sf2-bn-d5t" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="8JM-sQ-yIN"/>
                             <constraint firstItem="a1J-fI-gk2" firstAttribute="top" secondItem="llT-5b-x2c" secondAttribute="bottom" constant="25" id="B6a-oz-oEE"/>
                             <constraint firstItem="K5h-op-RVd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="FVv-It-QWz"/>
+                            <constraint firstItem="GoP-F7-DVx" firstAttribute="top" secondItem="sf2-bn-d5t" secondAttribute="bottom" constant="50" id="Fz4-cj-cNk"/>
+                            <constraint firstItem="2rJ-49-mHq" firstAttribute="top" secondItem="kd4-1m-ID3" secondAttribute="bottom" constant="20" id="Ku1-Tx-Iu8"/>
                             <constraint firstItem="GoP-F7-DVx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="Oj4-cb-Sxz"/>
+                            <constraint firstItem="LyZ-3K-4ZX" firstAttribute="top" secondItem="Dsl-Lp-wH9" secondAttribute="bottom" id="PVM-8X-YPy"/>
                             <constraint firstItem="llT-5b-x2c" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="Suh-1A-PVa"/>
-                            <constraint firstItem="GoP-F7-DVx" firstAttribute="top" secondItem="sf2-bn-d5t" secondAttribute="bottom" constant="60" id="TOY-Pe-Yxm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LyZ-3K-4ZX" secondAttribute="trailing" constant="16" id="V2h-e9-5nA"/>
                             <constraint firstItem="1KF-kI-gIE" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WkB-9e-aWf"/>
                             <constraint firstItem="1KF-kI-gIE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="XkW-sb-weg"/>
                             <constraint firstItem="K5h-op-RVd" firstAttribute="top" secondItem="Hm9-Ra-a1W" secondAttribute="bottom" constant="25" id="agC-hH-Uy5"/>
+                            <constraint firstItem="LyZ-3K-4ZX" firstAttribute="leading" secondItem="sf2-bn-d5t" secondAttribute="trailing" constant="5" id="cXQ-lX-p2x"/>
+                            <constraint firstItem="sf2-bn-d5t" firstAttribute="top" secondItem="2rJ-49-mHq" secondAttribute="bottom" id="duq-xn-d0c"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kd4-1m-ID3" secondAttribute="trailing" constant="25" id="eLA-sC-ebg"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sf2-bn-d5t" secondAttribute="trailing" constant="25" id="fyY-cw-XLA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="llT-5b-x2c" secondAttribute="trailing" constant="25" id="gvx-iW-Khb"/>
+                            <constraint firstItem="2rJ-49-mHq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="hIp-Id-z7h"/>
                             <constraint firstItem="Hm9-Ra-a1W" firstAttribute="top" secondItem="1KF-kI-gIE" secondAttribute="bottom" constant="25" id="ppS-6L-D9T"/>
                             <constraint firstItem="llT-5b-x2c" firstAttribute="top" secondItem="K5h-op-RVd" secondAttribute="bottom" constant="25" id="qMp-J5-uyD"/>
                             <constraint firstItem="Hm9-Ra-a1W" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="wUA-Ix-3bB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K5h-op-RVd" secondAttribute="trailing" constant="25" id="xb1-w6-VTA"/>
+                            <constraint firstItem="Dsl-Lp-wH9" firstAttribute="top" secondItem="kd4-1m-ID3" secondAttribute="bottom" constant="30" id="y19-mI-mJ1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="a1J-fI-gk2" secondAttribute="trailing" constant="25" id="ySs-ZA-TrL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GoP-F7-DVx" secondAttribute="trailing" constant="25" id="yxw-Op-LHS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="breedPetTextField" destination="llT-5b-x2c" id="llp-Zp-4UZ"/>
+                        <outlet property="kgLabel" destination="LyZ-3K-4ZX" id="8TX-Ct-U5W"/>
                         <outlet property="kgPetSlider" destination="sf2-bn-d5t" id="psZ-hR-4sg"/>
                         <outlet property="namePetTextField" destination="K5h-op-RVd" id="waG-w9-cSw"/>
+                        <outlet property="numberKilosLabel" destination="Dsl-Lp-wH9" id="Wp8-vf-LuK"/>
                         <outlet property="petPhotoButton" destination="1KF-kI-gIE" id="5ZK-pr-kxS"/>
                         <outlet property="petSizeSegmentedControl" destination="kd4-1m-ID3" id="CAI-hE-eju"/>
                         <outlet property="registerPetButton" destination="GoP-F7-DVx" id="inh-7y-PIe"/>
                         <outlet property="registerPetLabel" destination="Hm9-Ra-a1W" id="cx5-Ee-nXV"/>
                         <outlet property="sexPetTextField" destination="a1J-fI-gk2" id="628-ho-uVU"/>
+                        <outlet property="weightLabel" destination="2rJ-49-mHq" id="ENw-84-i01"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

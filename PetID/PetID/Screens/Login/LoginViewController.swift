@@ -75,7 +75,7 @@ class LoginViewController: UIViewController {
     
     private func configLabel() {
         enterLabel.text = "Entrar"
-        enterLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        enterLabel.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         connectGoogleLabel.text = "ou conecte-se com"
         enterLabel.textColor = .white
         connectGoogleLabel.textColor = UIColor.TextPrimary
