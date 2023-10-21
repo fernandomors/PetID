@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
     }
     
-    func configBackground() {
+    private func configBackground() {
         view.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
         
         backgraundView.backgroundColor = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
@@ -33,25 +33,23 @@ class ViewController: UIViewController {
         backgraundView.clipsToBounds = false
     }
     
-    func configImage() {
+    private func configImage() {
         accessImage.image = UIImage(named: "accessOne")
         
     }
     
-    func configLabel() {
-        description01Label.text = "Proteja quem você ama!"
-        description01Label.textColor = UIColor.white
-        description01Label.numberOfLines = 0
-        description01Label.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
-        
-        description02Label.text = "Acompanhe as vacinas do seu pet."
-        description02Label.font = UIFont.systemFont(ofSize: 30, weight: .light)
-        description02Label.textColor = UIColor.white
-        description02Label.numberOfLines = 0
-        
+    private func LabelPattern(label: UILabel, text: String, color: UIColor, font: UIFont) {
+        label.text = text
+        label.textColor = color
+        label.font = font
     }
     
-    func configButton() {
+    private func configLabel() {
+        LabelPattern(label: description01Label, text: "Proteja quem você ama!", color: UIColor.white, font: UIFont.systemFont(ofSize: 30, weight: .semibold))
+        LabelPattern(label: description02Label, text: "Acompanhe as vacinas do seu pet.", color: UIColor.white, font: UIFont.systemFont(ofSize: 30, weight: .light))
+    }
+    
+    private func configButton() {
         nextButton.setImage(UIImage(named: "arrow"), for: .normal)
     }
     

@@ -10,25 +10,15 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var backgraundView: UIView!
-    
     @IBOutlet weak var logoImage: UIImageView!
-    
     @IBOutlet weak var enterLabel: UILabel!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var resetPasswordButton: UIButton!
-    
     @IBOutlet weak var enterButton: UIButton!
-    
     @IBOutlet weak var registerButton: UIButton!
-    
     @IBOutlet weak var connectGoogleLabel: UILabel!
-    
     @IBOutlet weak var googleButton: UIButton!
-    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
