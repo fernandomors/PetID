@@ -20,14 +20,11 @@ class ViewController: UIViewController {
         configImage()
         configLabel()
         configButton()
-        
     }
     
     private func configBackground() {
-        view.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
-        
-        backgraundView.backgroundColor = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
-        
+        view.backgroundColor = UIColor.secondary
+        backgraundView.backgroundColor = UIColor.primary
         backgraundView.roundCorners(cornerRadiuns: 50, typeCorners: [.SuperiorEsquerdo,.SuperiorDireito])
         backgraundView.layer.masksToBounds = true
         backgraundView.clipsToBounds = false
