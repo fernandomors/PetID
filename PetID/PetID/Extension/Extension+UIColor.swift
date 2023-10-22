@@ -34,4 +34,8 @@ extension UIColor {
     ///  - Cor marrom forte
     ///  - HEX: 795A45
     static let titlePrimary = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
+    /// Cor Terciária
+    ///  - Cor marrom forte
+    static let tertiary = UIColor(red: 181/255, green: 145/255, blue: 121/255, alpha: 1.0)
+    
 }
