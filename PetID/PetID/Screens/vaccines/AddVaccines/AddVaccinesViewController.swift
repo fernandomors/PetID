@@ -33,27 +33,27 @@ class AddVaccinesViewController: UIViewController {
         textField.backgroundColor = color
     }
     
-    func configTextField() {
+    private func configTextField() {
         textFieldPattern(textField: nameVaccinesTextField, delegate: self, placeholder: "Nome:", keyBoard: .default, color: UIColor.secondary)
         textFieldPattern(textField: petVaccinesTextField, delegate: self, placeholder: "Pet:", keyBoard: .default, color: UIColor.secondary)
         textFieldPattern(textField: dateVaccinesTextField, delegate: self, placeholder: "Data:", keyBoard: .default, color: UIColor.secondary)
     }
     
-    func configView() {
+    private func configView() {
         view.backgroundColor = UIColor.primary
     }
     
-    func configImage() {
+    private func configImage() {
         logoImage.image = UIImage(named: "LogotipoPetIDClear")
     }
     
-    func configLabel() {
+    private func configLabel() {
         addVaccinesLabel.text = "Adicionar vacina"
         addVaccinesLabel.font = UIFont.boldSystemFont(ofSize: 20)
         addVaccinesLabel.textColor = .white
     }
     
-    func configButton() {
+    private func configButton() {
         addVaccinesButton.backgroundColor = UIColor.secondary
         addVaccinesButton.layer.cornerRadius = 10
         addVaccinesButton.setTitle("Adicionar", for: .normal)
@@ -81,7 +81,7 @@ class AddVaccinesViewController: UIViewController {
         self.dateVaccinesTextField.text = formatador.string(from: sender.date)
     }
     
-    func addDoneButton() -> UIToolbar{
+    private func addDoneButton() -> UIToolbar{
         let doneTooBar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         
         doneTooBar.barStyle = .default

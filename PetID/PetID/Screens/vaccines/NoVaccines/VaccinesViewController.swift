@@ -10,13 +10,9 @@ import UIKit
 class VaccinesViewController: UIViewController {
 
     @IBOutlet weak var logoImage: UIImageView!
-    
     @IBOutlet weak var vaccinesLabel: UILabel!
-    
     @IBOutlet weak var logoNoVaccinesImage: UIImageView!
-    
     @IBOutlet weak var descriptionNoVaccinesLabel: UILabel!
-    
     @IBOutlet weak var programVaccinesButton: UIButton!
 
     override func viewWillAppear(_ animated: Bool) {
@@ -31,29 +27,30 @@ class VaccinesViewController: UIViewController {
         configButton()
     }
     
-    func configView() {
-        view.backgroundColor = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
+    private func configView() {
+        view.backgroundColor = UIColor.primary
     }
     
-    func configImage() {
+    private func configImage() {
         logoImage.image = UIImage(named: "LogoP")
         logoNoVaccinesImage.image = UIImage(named: "NoVaccines")
-        
     }
     
-    func configLabel() {
-        vaccinesLabel.text = "Vacinas agendadas"
-        vaccinesLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        vaccinesLabel.textColor = UIColor.white
-        
-        descriptionNoVaccinesLabel.text = "Nenhuma vacina agendada"
-        descriptionNoVaccinesLabel.textColor = UIColor.white
+    private func labelPattern(label: UILabel, text: String, font: UIFont, color: UIColor) {
+        label.text = text
+        label.font = font
+        label.textColor = color
     }
     
-    func configButton() {
+    private func configLabel() {
+        labelPattern(label: vaccinesLabel, text: "Vacinas agendadas", font: UIFont.boldSystemFont(ofSize: 20), color: UIColor.white)
+        labelPattern(label: descriptionNoVaccinesLabel, text: "Nenhuma vacina agendada", font: UIFont.systemFont(ofSize: 16, weight: .bold), color: UIColor.white)
+    }
+    
+    private func configButton() {
         programVaccinesButton.setTitle("Agendar", for: .normal)
-        programVaccinesButton.tintColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
-        programVaccinesButton.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
+        programVaccinesButton.tintColor = UIColor.TextPrimary
+        programVaccinesButton.backgroundColor = UIColor.secondary
         programVaccinesButton.layer.cornerRadius = 10
     }
     
