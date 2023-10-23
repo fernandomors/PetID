@@ -10,15 +10,10 @@ import UIKit
 class AddVaccinesViewController: UIViewController {
     
     @IBOutlet weak var logoImage: UIImageView!
-    
     @IBOutlet weak var addVaccinesLabel: UILabel!
-    
     @IBOutlet weak var nameVaccinesTextField: UITextField!
-    
     @IBOutlet weak var petVaccinesTextField: UITextField!
-    
     @IBOutlet weak var dateVaccinesTextField: UITextField!
-    
     @IBOutlet weak var addVaccinesButton: UIButton!
     
     override func viewDidLoad() {
@@ -31,26 +26,21 @@ class AddVaccinesViewController: UIViewController {
         dateVaccinesTextField.inputAccessoryView = self.addDoneButton()
     }
     
+    private func textFieldPattern(textField: UITextField, delegate: UITextFieldDelegate, placeholder: String, keyBoard: UIKeyboardType, color: UIColor) {
+        textField.delegate.self = delegate
+        textField.placeholder = placeholder
+        textField.keyboardType = keyBoard
+        textField.backgroundColor = color
+    }
+    
     func configTextField() {
-        nameVaccinesTextField.delegate = self
-        petVaccinesTextField.delegate = self
-        dateVaccinesTextField.delegate = self
-        
-        nameVaccinesTextField.placeholder = "Nome:"
-        petVaccinesTextField.placeholder = "Pet:"
-        dateVaccinesTextField.placeholder = "Data:"
-        
-        nameVaccinesTextField.keyboardType = .default
-        
-        petVaccinesTextField.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
-        dateVaccinesTextField.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
-        nameVaccinesTextField.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
-        
-        
+        textFieldPattern(textField: nameVaccinesTextField, delegate: self, placeholder: "Nome:", keyBoard: .default, color: UIColor.secondary)
+        textFieldPattern(textField: petVaccinesTextField, delegate: self, placeholder: "Pet:", keyBoard: .default, color: UIColor.secondary)
+        textFieldPattern(textField: dateVaccinesTextField, delegate: self, placeholder: "Data:", keyBoard: .default, color: UIColor.secondary)
     }
     
     func configView() {
-        view.backgroundColor = UIColor(red: 171/255, green: 130/255, blue: 98/255, alpha: 1.0)
+        view.backgroundColor = UIColor.primary
     }
     
     func configImage() {
@@ -64,10 +54,10 @@ class AddVaccinesViewController: UIViewController {
     }
     
     func configButton() {
-        addVaccinesButton.backgroundColor = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
+        addVaccinesButton.backgroundColor = UIColor.secondary
         addVaccinesButton.layer.cornerRadius = 10
         addVaccinesButton.setTitle("Adicionar", for: .normal)
-        addVaccinesButton.tintColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+        addVaccinesButton.tintColor = UIColor.Textsecondary
     }
     
     @IBAction func tappedPetVaccinesTextField(_ sender: UITextField) {
