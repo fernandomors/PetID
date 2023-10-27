@@ -50,8 +50,8 @@ class RegisteredPetsViewController: UIViewController {
     func configButton() {
         backButton.setImage(UIImage(named: "ButtonBack"), for: .normal)
         
-        AddPetButton.setImage(UIImage(named: "plus"), for: .normal)
-        AddPetButton.tintColor = UIColor.primary
+        AddPetButton.setImage(UIImage(named: "Plus"), for: .normal)
+        AddPetButton.setTitleColor(UIColor.primary, for: .normal)
         AddPetButton.backgroundColor = UIColor.secondary
         AddPetButton.layer.cornerRadius = 10
     }

@@ -74,9 +74,9 @@ class HomeViewController: UIViewController {
         programmedVaccinationsCollectionView.showsHorizontalScrollIndicator = false
         
         // deixar um espaçamento entre as celulas
-        //        layout.minimumInteritemSpacing = 100
-        //
-        //        programmedVaccinationsCollectionView.collectionViewLayout = layout
+        layout.minimumInteritemSpacing = 100
+        
+        programmedVaccinationsCollectionView.collectionViewLayout = layout
     }
     
     func configLastVacationCollectionView() {

@@ -71,18 +71,23 @@ class LoginViewController: UIViewController {
         connectGoogleLabel.textColor = UIColor.TextPrimary
     }
     
-    private func ButtonPattern(button: UIButton, title: String, titleColor: UIColor, background: UIColor, radius: CGFloat) {
+    private func ButtonPattern(button: UIButton, title: String, titleColor: UIColor, background: UIColor, radius: CGFloat, opacidadeDaSombra: Float, raioDaSombra: CGFloat, corDaSombra: CGColor, direcaoSombra: CGSize) {
         button.setTitle(title, for: .normal)
         button.backgroundColor = background
         button.setTitleColor(titleColor, for: .normal)
-        button.layer.cornerRadius = radius 
-        
+        button.layer.cornerRadius = radius
+        button.layer.shadowOpacity = opacidadeDaSombra // Opacidade
+        button.layer.shadowRadius = raioDaSombra   // Raio
+        button.layer.shadowColor = corDaSombra  // Cor
+        button.layer.shadowOffset = direcaoSombra   // Direção
+
+
     }
     
     private func configButton(){
-        ButtonPattern(button: enterButton, title: "Entrar", titleColor: .TextPrimary , background: .titlePrimary, radius: 10)
-        ButtonPattern(button: registerButton, title: "Registre-se agora", titleColor: .white, background: .clear, radius: 0)
-        ButtonPattern(button: resetPasswordButton, title: "Redefinir senha", titleColor: .white, background: .clear, radius: 0)
+        ButtonPattern(button: enterButton, title: "Entrar", titleColor: .TextPrimary , background: .titlePrimary, radius: 10, opacidadeDaSombra: 0.5, raioDaSombra: 2, corDaSombra: UIColor.black.cgColor, direcaoSombra:  CGSize(width: 0, height: 3))
+        ButtonPattern(button: registerButton, title: "Registre-se agora", titleColor: .white, background: .clear, radius: 0, opacidadeDaSombra: 0.0, raioDaSombra: 0, corDaSombra: UIColor.black.cgColor, direcaoSombra:  CGSize(width: 0, height: 0))
+        ButtonPattern(button: resetPasswordButton, title: "Redefinir senha", titleColor: .white, background: .clear, radius: 0, opacidadeDaSombra: 0.0, raioDaSombra: 0, corDaSombra: UIColor.black.cgColor, direcaoSombra:  CGSize(width: 0, height: 0))
         
     }
     

@@ -73,6 +73,10 @@ class RegisterViewController: UIViewController {
         createAccountButton.tintColor = UIColor.TextPrimary
         createAccountButton.setTitle("Criar conta", for: .normal)
         createAccountButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        createAccountButton.layer.shadowOpacity = 0.5 // Opacidade
+        createAccountButton.layer.shadowRadius = 2   // Raio
+        createAccountButton.layer.shadowColor = UIColor.black.cgColor  // Cor
+        createAccountButton.layer.shadowOffset = CGSize(width: 0, height: 3)   // Direção
         
         backButton.setImage(UIImage(named: "ButtonBack"), for: .normal)
     }

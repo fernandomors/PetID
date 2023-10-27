@@ -55,13 +55,17 @@ class RecoverPasswordViewController: UIViewController {
     }
     private func configLabel() {
         labelPattern(label: recoverPasswordLabel, text: "Recuperar senha", font: UIFont.boldSystemFont(ofSize: 30), color: .white)
-        labelPattern(label: DescriptionLabel, text: "Por favor, insira o email para o qual deseja redefinir a senha", font: UIFont(), color: UIColor.secondary)
+        labelPattern(label: DescriptionLabel, text: "Por favor, insira o email para o qual deseja redefinir a senha", font: UIFont.systemFont(ofSize: 12), color: UIColor.secondary)
     }
     private func configButton() {
         recoverButton.setTitle("Redefinir", for: .normal)
         recoverButton.tintColor = UIColor.primary
         recoverButton.backgroundColor = UIColor.secondary
         recoverButton.layer.cornerRadius = 10
+        recoverButton.layer.shadowOpacity = 0.5 // Opacidade
+        recoverButton.layer.shadowRadius = 2   // Raio
+        recoverButton.layer.shadowColor = UIColor.black.cgColor  // Cor
+        recoverButton.layer.shadowOffset = CGSize(width: 0, height: 3)   // Direção
         
         backButton.setImage(UIImage(named: "ButtonBack"), for: .normal)
         
