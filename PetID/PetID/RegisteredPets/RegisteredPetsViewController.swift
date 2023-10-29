@@ -46,6 +46,8 @@ class RegisteredPetsViewController: UIViewController {
     }
     func configLabel() {
         myPetsLabel.text = "Meus pets"
+        myPetsLabel.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+        myPetsLabel.textColor = .secondary
     }
     func configButton() {
         backButton.setImage(UIImage(named: "ButtonBack"), for: .normal)
@@ -54,8 +56,21 @@ class RegisteredPetsViewController: UIViewController {
         AddPetButton.setTitleColor(UIColor.primary, for: .normal)
         AddPetButton.backgroundColor = UIColor.secondary
         AddPetButton.layer.cornerRadius = 10
+        AddPetButton.layer.shadowOpacity = 0.3 // Opacidade
+        AddPetButton.layer.shadowRadius = 4   // Raio
+        AddPetButton.layer.shadowColor = UIColor.black.cgColor // Cor
+        AddPetButton.layer.shadowOffset = CGSize(width: 0, height: 3)   // Direção
     }
     
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func tappedAddPetButton(_ sender: UIButton) {
+        let vc = UIStoryboard(name: String(describing: AddPetViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: AddPetViewController.self)) as? AddPetViewController
+        present(vc ?? UIViewController(), animated: true)
+    }
     
 }
 extension RegisteredPetsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -66,9 +81,10 @@ extension RegisteredPetsViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RegisteredPetsTableViewCell.self), for: indexPath) as? RegisteredPetsTableViewCell
         cell?.setupCell(data: listRegisteredPets[indexPath.row])
-        cell?.layer.cornerRadius = 8
         return cell ?? UITableViewCell()
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
     
 }

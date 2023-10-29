@@ -40,16 +40,23 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNy-Aj-Lw8">
                                 <rect key="frame" x="25" y="541" width="325" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="qVl-e5-gi3"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="tappedAddPetButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="IUM-Pr-3So"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aH-Ls-8ID">
-                                <rect key="frame" x="15" y="30" width="12" height="22"/>
+                                <rect key="frame" x="15" y="35" width="12" height="22"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="ButtonBack"/>
+                                <connections>
+                                    <action selector="tappedBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eo2-ti-RCo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -58,7 +65,7 @@
                             <constraint firstItem="SMZ-4m-NGq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2Jw-Cc-LuV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LNy-Aj-Lw8" secondAttribute="trailing" constant="25" id="EeR-fD-dQG"/>
                             <constraint firstItem="SMZ-4m-NGq" firstAttribute="top" secondItem="sYb-ch-6S0" secondAttribute="bottom" constant="15" id="W3X-3v-2lW"/>
-                            <constraint firstItem="6aH-Ls-8ID" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="YR8-hG-dec"/>
+                            <constraint firstItem="6aH-Ls-8ID" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="YR8-hG-dec"/>
                             <constraint firstItem="sYb-ch-6S0" firstAttribute="centerX" secondItem="HeH-QZ-rk4" secondAttribute="centerX" id="Z09-uE-htj"/>
                             <constraint firstItem="LNy-Aj-Lw8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="iNu-aw-aEG"/>
                             <constraint firstItem="sYb-ch-6S0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="kCM-8H-UeJ"/>

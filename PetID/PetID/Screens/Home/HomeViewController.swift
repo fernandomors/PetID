@@ -48,6 +48,13 @@ class HomeViewController: UIViewController {
         configView()
         configButton()
         configImage()
+        
+        
+//        let layout = UICollectionViewFlowLayout()
+//        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
+//        layout.minimumLineSpacing = 8
+//        layout.minimumInteritemSpacing = 20
+//        self.ViewPetsCollectionView.collectionViewLayout = layout
     }
     
     func configPetCollectionView() {
@@ -172,7 +179,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == ViewPetsCollectionView {
-            return CGSize(width: 100, height: 100)
+            return CGSize(width: 120, height: 120)
         } else if collectionView == programmedVaccinationsCollectionView {
             return CGSize(width: 150, height: 70)
         } else if collectionView == lastVaccinesCollectionView {
@@ -185,14 +192,22 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         print(listPets[indexPath.row].name)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        if collectionView == ViewPetsCollectionView {
-//            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 100)
-//        }
-//        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 100)
-//    }
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    //            // Define o espaçamento horizontal entre as células na mesma linha aqui
-    //            return 100
-    //        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == ViewPetsCollectionView {
+            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        } else if collectionView == programmedVaccinationsCollectionView {
+                return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        } else if collectionView == lastVaccinesCollectionView {
+            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        }
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+        
+//        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//                // Define o espaçamento horizontal entre as células na mesma linha aqui
+//            if collectionView == ViewPetsCollectionView {
+//                return 50
+//            }
+//                return 0
+//            }
 }

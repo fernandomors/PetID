@@ -85,7 +85,7 @@ class LoginViewController: UIViewController {
     }
     
     private func configButton(){
-        ButtonPattern(button: enterButton, title: "Entrar", titleColor: .TextPrimary , background: .titlePrimary, radius: 10, opacidadeDaSombra: 0.5, raioDaSombra: 2, corDaSombra: UIColor.black.cgColor, direcaoSombra:  CGSize(width: 0, height: 3))
+        ButtonPattern(button: enterButton, title: "Entrar", titleColor: .TextPrimary , background: .titlePrimary, radius: 10, opacidadeDaSombra: 0.3, raioDaSombra: 2, corDaSombra: UIColor.black.cgColor, direcaoSombra:  CGSize(width: 0, height: 3))
         ButtonPattern(button: registerButton, title: "Registre-se agora", titleColor: .white, background: .clear, radius: 0, opacidadeDaSombra: 0.0, raioDaSombra: 0, corDaSombra: UIColor.black.cgColor, direcaoSombra:  CGSize(width: 0, height: 0))
         ButtonPattern(button: resetPasswordButton, title: "Redefinir senha", titleColor: .white, background: .clear, radius: 0, opacidadeDaSombra: 0.0, raioDaSombra: 0, corDaSombra: UIColor.black.cgColor, direcaoSombra:  CGSize(width: 0, height: 0))
         

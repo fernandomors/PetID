@@ -10,6 +10,7 @@ import UIKit
 class RegisteredPetsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var namePetLabel: UILabel!
+    @IBOutlet weak var backgraundView: UIView!
     
     static let identifier: String = String(describing: RegisteredPetsTableViewCell.self)
     
@@ -19,8 +20,13 @@ class RegisteredPetsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        namePetLabel.text = "Luna"
-        backgroundView?.backgroundColor = UIColor.primary
+        contentView.backgroundColor = .primary
+        
+        namePetLabel.textColor = .primary
+        namePetLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        backgraundView.backgroundColor = UIColor.secondary
+        backgraundView.layer.cornerRadius = 8
+        
     }
         
     func setupCell(data: RegisteredPets) {
