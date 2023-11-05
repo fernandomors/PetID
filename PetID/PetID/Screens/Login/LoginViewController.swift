@@ -80,8 +80,6 @@ class LoginViewController: UIViewController {
         button.layer.shadowRadius = raioDaSombra   // Raio
         button.layer.shadowColor = corDaSombra  // Cor
         button.layer.shadowOffset = direcaoSombra   // Direção
-
-
     }
     
     private func configButton(){

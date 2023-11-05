@@ -42,7 +42,6 @@
 		6DC234FF2AD49F6100ECA829 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC234FE2AD49F6100ECA829 /* SettingsViewController.swift */; };
 		6DCD96BA2AC8A45C0089F811 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD96B92AC8A45C0089F811 /* RegisterViewController.storyboard */; };
 		6DCD96BC2AC8A46B0089F811 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCD96BB2AC8A46B0089F811 /* RegisterViewController.swift */; };
-		6DCF55A52AE2D8A400A38C25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DCF55A42AE2D8A400A38C25 /* GoogleService-Info.plist */; };
 		6DD1F8972AC49F70007FEC1A /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD1F8962AC49F70007FEC1A /* LoginViewController.storyboard */; };
 		6DD1F8992AC49F8B007FEC1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD1F8982AC49F8B007FEC1A /* LoginViewController.swift */; };
 		6DD363AF2ACE530B004C7D49 /* RegisteredPetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD363AE2ACE530B004C7D49 /* RegisteredPetsViewController.swift */; };
@@ -110,7 +109,6 @@
 		6DC234FE2AD49F6100ECA829 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6DCD96B92AC8A45C0089F811 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
 		6DCD96BB2AC8A46B0089F811 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		6DCF55A42AE2D8A400A38C25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6DD1F8962AC49F70007FEC1A /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		6DD1F8982AC49F8B007FEC1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6DD363AE2ACE530B004C7D49 /* RegisteredPetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsViewController.swift; sourceTree = "<group>"; };
@@ -284,7 +282,6 @@
 			children = (
 				6DA6E39B2ABCCFEF002412CD /* PetIDUITests.swift */,
 				6DA6E39D2ABCCFEF002412CD /* PetIDUITestsLaunchTests.swift */,
-				6DCF55A42AE2D8A400A38C25 /* GoogleService-Info.plist */,
 			);
 			path = PetIDUITests;
 			sourceTree = "<group>";
@@ -524,7 +521,6 @@
 				6DCD96BA2AC8A45C0089F811 /* RegisterViewController.storyboard in Resources */,
 				6DA6E3842ABCCFEF002412CD /* Assets.xcassets in Resources */,
 				6DBB6A852ACE05D700DC8424 /* PetsCollectionViewCell.xib in Resources */,
-				6DCF55A52AE2D8A400A38C25 /* GoogleService-Info.plist in Resources */,
 				6DC234F82AD485F600ECA829 /* VaccinesViewController.storyboard in Resources */,
 				6DC234FD2AD49F4A00ECA829 /* SettingsViewController.storyboard in Resources */,
 				6DA6E3822ABCCFEE002412CD /* Main.storyboard in Resources */,

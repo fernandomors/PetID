@@ -50,11 +50,11 @@ class HomeViewController: UIViewController {
         configImage()
         
         
-//        let layout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
-//        layout.minimumLineSpacing = 8
-//        layout.minimumInteritemSpacing = 20
-//        self.ViewPetsCollectionView.collectionViewLayout = layout
+        //        let layout = UICollectionViewFlowLayout()
+        //        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
+        //        layout.minimumLineSpacing = 8
+        //        layout.minimumInteritemSpacing = 20
+        //        self.ViewPetsCollectionView.collectionViewLayout = layout
     }
     
     func configPetCollectionView() {
@@ -113,6 +113,10 @@ class HomeViewController: UIViewController {
         
         addPetButton.setImage(UIImage(systemName: "plus"), for: .normal)
         addPetButton.tintColor = UIColor.white
+        addPetButton.layer.shadowOpacity = 0.3
+        addPetButton.layer.shadowRadius = 2
+        addPetButton.layer.shadowColor = UIColor.black.cgColor
+        addPetButton.layer.shadowOffset =  CGSize(width: 0, height: 3)
     }
     
     private func labelPattern(label: UILabel, text: String, color: UIColor, font: UIFont) {
@@ -122,10 +126,10 @@ class HomeViewController: UIViewController {
     }
     
     func configLabel() {
-        labelPattern(label: NamePersonLabel, text: "Olá, Fernando", color: UIColor.white, font: UIFont.systemFont(ofSize: 16, weight: .semibold))
+        labelPattern(label: NamePersonLabel, text: "Olá, Fernando", color: UIColor.white, font: UIFont.systemFont(ofSize: 18, weight: .semibold))
         labelPattern(label: NamePetLabel, text: "Luna", color: UIColor.TextPrimary, font: UIFont.systemFont(ofSize: 26, weight: .bold))
         labelPattern(label: breedPetLabel, text: "Golden", color: UIColor.TextPrimary, font: UIFont.systemFont(ofSize: 12, weight: .regular))
-        labelPattern(label: programmedVaccinationsLabel, text: "Vacinas agendadas", color: UIColor.TextPrimary, font: UIFont.systemFont(ofSize: 16, weight: .regular))
+        labelPattern(label: programmedVaccinationsLabel, text: "Vacinas agendadas", color: UIColor.TextPrimary, font: UIFont.systemFont(ofSize: 16, weight: .bold))
         labelPattern(label: lastVaccinesLabel, text: "Últimas vacinas", color: UIColor.TextPrimary, font: UIFont.systemFont(ofSize: 16, weight: .bold))
     }
     
@@ -196,18 +200,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == ViewPetsCollectionView {
             return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         } else if collectionView == programmedVaccinationsCollectionView {
-                return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         } else if collectionView == lastVaccinesCollectionView {
             return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         }
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
-        
-//        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//                // Define o espaçamento horizontal entre as células na mesma linha aqui
-//            if collectionView == ViewPetsCollectionView {
-//                return 50
-//            }
-//                return 0
-//            }
+    
+    //        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    //                // Define o espaçamento horizontal entre as células na mesma linha aqui
+    //            if collectionView == ViewPetsCollectionView {
+    //                return 50
+    //            }
+    //                return 0
+    //            }
 }
