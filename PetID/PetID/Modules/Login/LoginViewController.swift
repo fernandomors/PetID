@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import GoogleSignIn
+import FirebaseCore
 
 class LoginViewController: UIViewController {
     
@@ -23,20 +26,88 @@ class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    private var viewModel: LoginViewModel = LoginViewModel()
+    private var auth: Auth?
+    private var alert: Alert?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        auth = Auth.auth()
         configDelegate()
         configTextField()
         configView()
         configImage()
         configLabel()
         configButton()
-        validaTextField()
+        validateFieldToLogin()
+    }
+    
+    @IBAction func tappedResetPasswordButton(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: String(describing: RecoverPasswordViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RecoverPasswordViewController.self)) as? RecoverPasswordViewController
+        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+    }
+    
+    @IBAction func tappedEnterButton(_ sender: UIButton) {
+        
+        let validateEmail = viewModel.validateEmail(emailTextField.text ?? "")
+        let validatePassword = viewModel.validatePassword(passwordTextField.text ?? "")
+        
+        if validateEmail && validatePassword {
+            validateFieldToLogin()
+        } else {
+            alert?.createAlert(title: "Erro!", message: "Os campos não podem estar vazios e os dados precisam ser válidos", preferredStyle: .alert)
+        }
+    }
+    
+    @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: String(describing: RegisterViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RegisterViewController.self)) as? RegisterViewController
+        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+    }
+    
+    @IBAction func tappedLogGoogleButton(_ sender: UIButton) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+                
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
+            guard error == nil else { return }
+            guard let signInResult = signInResult else { return }
+
+            let user = signInResult.user // here i got access to the user
+            
+            let viewController = UIStoryboard(name: String(describing: TabBarController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarController.self)) as? TabBarController
+            self.resetTextField()
+            self.navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+
+        }
+    }
+    
+    private func validateFieldToLogin() {
+        self.auth?.signIn(withEmail: emailTextField.text ?? "", password: passwordTextField.text ?? "", completion: { user, error in
+            if error != nil {
+                self.alert?.createAlert(title: "Atenção", message: "Dados incorretos", preferredStyle: .alert)
+            } else {
+                if user == nil {
+                    self.alert?.createAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente mais tarde", preferredStyle: .alert)
+                } else {
+                    let viewController = UIStoryboard(name: String(describing: TabBarController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarController.self)) as? TabBarController
+                    self.resetTextField()
+                    self.navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+                }
+            }
+        })
     }
     
     private func configDelegate() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
+    }
+    
+    private func resetTextField() {
+        emailTextField.text = ""
+        passwordTextField.text = ""
     }
     
     private func TextFieldPattern(textField: UITextField, placeholder: String, cornerRadius: CGFloat, bounds: Bool, isSecure: Bool) {
@@ -90,44 +161,29 @@ class LoginViewController: UIViewController {
     }
     
     private func validaTextField() {
-        if emailTextField.text != "" && passwordTextField.text != "" {
+        if ((emailTextField.text?.isEmpty) != nil) && ((passwordTextField.text?.isEmpty) != nil) {
             enterButton.isEnabled = true
         } else {
             enterButton.isEnabled = false
         }
-        
     }
     
-    @IBAction func tappedResetPasswordButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: String(describing: RecoverPasswordViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RecoverPasswordViewController.self)) as? RecoverPasswordViewController
-        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
-    }
-    
-    @IBAction func tappedEnterButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: String(describing: TabBarController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarController.self)) as? TabBarController
-        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
-    }
-    
-    @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: String(describing: RegisterViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RegisterViewController.self)) as? RegisterViewController
-        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
-    }
     
 }
 
 extension LoginViewController: UITextFieldDelegate {
     
-    // esté metodo é disparado quando o teclado é levantado
+    // Este metodo é disparado quando o teclado é levantado
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
     }
     
-    // esté metodo é disparado o teclado é abaixado
+    // Este metodo é disparado o teclado é abaixado
     func textFieldDidEndEditing(_ textField: UITextField) {
         validaTextField()
     }
     
-    // esté método sempre é disparado quando clicamos no botão "retorno"
+    // Este método sempre é disparado quando clicamos no botão "retorno"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.becomeFirstResponder()
         return true
