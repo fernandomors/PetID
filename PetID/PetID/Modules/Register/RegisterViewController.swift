@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterViewController: UIViewController {
     
@@ -19,6 +21,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var createAccountButton: UIButton!
     
+    private var alert: Alert = Alert()
+    private let viewModel = RegisterViewModel()
+    private var auth: Auth?
+    private var firestore: Firestore?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configDelegate()
@@ -28,9 +35,73 @@ class RegisterViewController: UIViewController {
         configImage()
         configButton()
         validaTextField()
+        self.auth = Auth.auth()
+        self.firestore = Firestore.firestore()
+        var fireStoreManager = FirestoreManager.shared
+    }
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func tappedCreateAccountButton(_ sender: UIButton) {
+        guard let nameValue = nameTextField.text,
+                      let emailValue = emailTextField.text,
+                      let passwordValue = passwordTextField.text,
+                      let confirmPasswordValue = confirmPasswordTextField.text
+                else {return}
+
+        if viewModel.validateForms(name: nameValue, email: emailValue, password: passwordValue, confirmPassword: confirmPasswordValue) {
+            self.registerNewUser()
+        } else {
+            self.alert.createAlert(title: "Atenção", message: "Erro ao cadastrar", preferredStyle: .alert)
+        }
+    }
+    
+    func validaTextField() {
+        if nameTextField.text != "" && lastNameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != "" && confirmPasswordTextField.text != "" {
+            createAccountButton.isEnabled = true
+        } else {
+            createAccountButton.isEnabled = false
+        }
+    }
+    
+    private func registerNewUser() {
+        
+        guard let emailValid = emailTextField.text, let passwordValid = passwordTextField.text else {return}
+        self.auth?.createUser(withEmail: emailValid, password: passwordValid, completion: { result, error in
+            if error != nil {
+                self.alert.createAlert(title: "Erro!", message: "Esse e-mail ja existe", preferredStyle: .alert)
+            } else {
+                if let idUser = result?.user.uid {
+                    self.firestore?.collection("usuários").document(idUser).setData([
+                        "Nome": self.nameTextField.text ?? "",
+                        "Email": self.emailTextField.text ?? "",
+                        "id": idUser
+                    ])
+                    
+//                    self.fireStoreManager.createUser(name: self.nameTextField.text ?? "", email: emailValid) { error in
+//                        if error != nil {
+//                            print(error?.localizedDescription as Any)
+//                        } else {
+//                            print("Firestore database criado")
+//                        }
+//                    }
+                }
+                self.alert.createAlert(title: "Sucesso", message: "Cadastro Efetuado com sucesso!", preferredStyle: .alert, completion: {
+                    self.login()
+                })
+            }
+        })
+    }
+    
+    private func login() {
+        let tabBarController = UIStoryboard(name: String(describing: TabBarController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarController.self)) as? UITabBarController
+        self.navigationController?.pushViewController(tabBarController ?? UITabBarController(), animated: true)
         
     }
-    func configDelegate() {
+    
+    private func configDelegate() {
         nameTextField.delegate = self
         lastNameTextField.delegate = self
         emailTextField.delegate = self
@@ -77,25 +148,11 @@ class RegisterViewController: UIViewController {
         createAccountButton.layer.shadowRadius = 2   // Raio
         createAccountButton.layer.shadowColor = UIColor.black.cgColor  // Cor
         createAccountButton.layer.shadowOffset = CGSize(width: 0, height: 3)   // Direção
-        
         backButton.setImage(UIImage(named: "ButtonBack"), for: .normal)
     }
     
-    @IBAction func tappedBackButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func tappedCreateAccountButton(_ sender: UIButton) {
-        
-    }
-    
-    
-    func validaTextField() {
-        if nameTextField.text != "" && lastNameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != "" && confirmPasswordTextField.text != "" {
-            createAccountButton.isEnabled = true
-        } else {
-            createAccountButton.isEnabled = false
-        }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
 }
@@ -111,7 +168,6 @@ extension RegisterViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        viewModel.getConfigTextFieldShouldReturn(textField: textField, nameTextField: nameTextField, emailTextField: emailTextField, passwordTextField: passwordTextField, confirmPasswordTextField: confirmPasswordTextField)
     }
 }

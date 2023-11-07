@@ -57,6 +57,8 @@
 		C4E95FA92AF850BA004B1EB2 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E95FA82AF850BA004B1EB2 /* Alert.swift */; };
 		C4E95FAD2AF85443004B1EB2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E95FAC2AF85443004B1EB2 /* LoginViewModel.swift */; };
 		C4E95FB02AF85902004B1EB2 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E95FAF2AF85902004B1EB2 /* RegisterViewModel.swift */; };
+		C4E95FB32AF93491004B1EB2 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E95FB22AF93491004B1EB2 /* FirestoreManager.swift */; };
+		C4E95FB52AF93540004B1EB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E95FB42AF93540004B1EB2 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,8 @@
 		C4E95FA82AF850BA004B1EB2 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C4E95FAC2AF85443004B1EB2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C4E95FAF2AF85902004B1EB2 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		C4E95FB22AF93491004B1EB2 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		C4E95FB42AF93540004B1EB2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E347411274D911EA10DE2274 /* Pods-PetID-PetIDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetID-PetIDUITests.release.xcconfig"; path = "Target Support Files/Pods-PetID-PetIDUITests/Pods-PetID-PetIDUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF17EDDF532320FFEBE7E21D /* Pods_PetID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -305,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				6DBB6A802ACDE98800DC8424 /* Model */,
+				C4E95FB12AF93474004B1EB2 /* Service */,
 				6DBB6A812ACDE99000DC8424 /* Cell */,
 				6D12ADCB2ACD207200893AA5 /* Extension */,
 				C4E95FA72AF850A2004B1EB2 /* Alert */,
@@ -350,6 +355,7 @@
 				6D628D592ADF5C7C0087AD53 /* ProgrammedVaccinations.swift */,
 				6D4999902AE1DAC200805B15 /* LastVacation.swift */,
 				6D760BC82AEAEA9200C21572 /* RegisteredPets.swift */,
+				C4E95FB42AF93540004B1EB2 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -487,6 +493,14 @@
 				C4E95FAF2AF85902004B1EB2 /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4E95FB12AF93474004B1EB2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C4E95FB22AF93491004B1EB2 /* FirestoreManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -759,9 +773,11 @@
 				C4E95FAD2AF85443004B1EB2 /* LoginViewModel.swift in Sources */,
 				6D12ADB92ACCD8A600893AA5 /* TabBarController.swift in Sources */,
 				6D628D5C2ADF5C7C0087AD53 /* Pets.swift in Sources */,
+				C4E95FB32AF93491004B1EB2 /* FirestoreManager.swift in Sources */,
 				C40CDAAA2ADC7F4A00A752EF /* Extension+UIColor.swift in Sources */,
 				6D628D602ADF5CB90087AD53 /* ProgrammedVaccinationCollectionViewCell.swift in Sources */,
 				6D4999912AE1DAC200805B15 /* LastVacation.swift in Sources */,
+				C4E95FB52AF93540004B1EB2 /* User.swift in Sources */,
 				6DBB6A7F2ACDE69E00DC8424 /* HomeViewController.swift in Sources */,
 				6D628D662AE0365F0087AD53 /* AddPetViewController.swift in Sources */,
 				C4E95FB02AF85902004B1EB2 /* RegisterViewModel.swift in Sources */,
