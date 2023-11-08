@@ -36,8 +36,6 @@ class RegisterViewController: UIViewController {
         configButton()
         validaTextField()
         self.auth = Auth.auth()
-        self.firestore = Firestore.firestore()
-        var fireStoreManager = FirestoreManager.shared
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
@@ -79,14 +77,6 @@ class RegisterViewController: UIViewController {
                         "Email": self.emailTextField.text ?? "",
                         "id": idUser
                     ])
-                    
-//                    self.fireStoreManager.createUser(name: self.nameTextField.text ?? "", email: emailValid) { error in
-//                        if error != nil {
-//                            print(error?.localizedDescription as Any)
-//                        } else {
-//                            print("Firestore database criado")
-//                        }
-//                    }
                 }
                 self.alert.createAlert(title: "Sucesso", message: "Cadastro Efetuado com sucesso!", preferredStyle: .alert, completion: {
                     self.login()
