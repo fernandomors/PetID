@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
         if validateEmail && validatePassword {
             validateFieldToLogin()
         } else {
-            alert?.createAlert(title: "Erro!", message: "Os campos não podem estar vazios e os dados precisam ser válidos", preferredStyle: .alert)
+            alert?.createAlert(title: "Erro!", message: "Os campos não podem estar vazios e os dados precisam ser válidos")
         }
     }
     
@@ -87,10 +87,10 @@ class LoginViewController: UIViewController {
     private func validateFieldToLogin() {
         self.auth?.signIn(withEmail: emailTextField.text ?? "", password: passwordTextField.text ?? "", completion: { user, error in
             if error != nil {
-                self.alert?.createAlert(title: "Atenção", message: "Dados incorretos", preferredStyle: .alert)
+                self.alert?.createAlert(title: "Atenção", message: "Dados incorretos")
             } else {
                 if user == nil {
-                    self.alert?.createAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente mais tarde", preferredStyle: .alert)
+                    self.alert?.createAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente mais tarde")
                 } else {
                     let viewController = UIStoryboard(name: String(describing: TabBarController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarController.self)) as? TabBarController
                     self.resetTextField()

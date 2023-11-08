@@ -16,7 +16,7 @@ class Alert {
         self.controller = controller
     }
     
-    public func createAlert(title: String, message: String, preferredStyle: UIAlertController.Style ,completion: (() -> Void)? = nil) {
+    public func createAlert(title: String, message: String ,completion: (() -> Void)? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "OK", style: .cancel) { (_) in
             completion?()
