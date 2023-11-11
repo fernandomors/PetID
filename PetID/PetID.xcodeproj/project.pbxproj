@@ -361,7 +361,6 @@
 			isa = PBXGroup;
 			children = (
 				6D760BC32AEAE9AA00C21572 /* RegisteredPets */,
-				6D4999922AE1DBF100805B15 /* LastVacation */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -471,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				6DBB6A882ACE274200DC8424 /* Pets */,
+				6D4999922AE1DBF100805B15 /* LastVacation */,
 				6D628D612AE035660087AD53 /* ProgrammedVaccination */,
 			);
 			path = Cell;
