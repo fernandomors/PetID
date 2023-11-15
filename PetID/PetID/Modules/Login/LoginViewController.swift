@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var connectGoogleLabel: UILabel!
     @IBOutlet weak var googleButton: UIButton!
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -39,7 +40,7 @@ class LoginViewController: UIViewController {
         configImage()
         configLabel()
         configButton()
-        validateFieldToLogin()
+        alert = Alert(controller: self)
     }
     
     @IBAction func tappedResetPasswordButton(_ sender: UIButton) {
@@ -168,7 +169,9 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
 }
 
 extension LoginViewController: UITextFieldDelegate {

@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedNextButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: "LoginViewController", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        let viewController = UIStoryboard(name: String(describing: LoginViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: LoginViewController.self)) as? LoginViewController
         navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
         
     }

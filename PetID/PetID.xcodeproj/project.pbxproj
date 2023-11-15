@@ -195,8 +195,12 @@
 		6D12ADB72ACCD88200893AA5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				6D12ADB82ACCD8A600893AA5 /* TabBarController.swift */,
-				6DD363B42ACE6772004C7D49 /* TabBarController.storyboard */,
+				6D5DBA292B043B16002FAAD8 /* TabBarController */,
+				6DBB6A7B2ACDE65600DC8424 /* Home */,
+				6DD363AB2ACE52AC004C7D49 /* RegisteredPets */,
+				6D628D622AE0361B0087AD53 /* AddPet */,
+				6DC234F62AD4858B00ECA829 /* vaccines */,
+				6DC234FB2AD49F2500ECA829 /* Settings */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -217,6 +221,15 @@
 				6D4999942AE1DC7200805B15 /* LastVacationCollectionViewCell.xib */,
 			);
 			path = LastVacation;
+			sourceTree = "<group>";
+		};
+		6D5DBA292B043B16002FAAD8 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				6D12ADB82ACCD8A600893AA5 /* TabBarController.swift */,
+				6DD363B42ACE6772004C7D49 /* TabBarController.storyboard */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 		6D628D612AE035660087AD53 /* ProgrammedVaccination */ = {
@@ -254,10 +267,6 @@
 				6D94E4D12ACCAC6E004D53E6 /* PasswordRecovery */,
 				6DCD96B82AC8A3A40089F811 /* Register */,
 				6D12ADB72ACCD88200893AA5 /* TabBar */,
-				6DBB6A7B2ACDE65600DC8424 /* Home */,
-				6D628D622AE0361B0087AD53 /* AddPet */,
-				6DC234F62AD4858B00ECA829 /* vaccines */,
-				6DC234FB2AD49F2500ECA829 /* Settings */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -312,7 +321,6 @@
 				C4E95FA72AF850A2004B1EB2 /* Alert */,
 				C4E95FA42AF83AE8004B1EB2 /* Resources */,
 				6D941E422AD0D46100FE25FB /* Modules */,
-				6DD363AB2ACE52AC004C7D49 /* RegisteredPets */,
 				6DA6E3882ABCCFEF002412CD /* Info.plist */,
 			);
 			path = PetID;

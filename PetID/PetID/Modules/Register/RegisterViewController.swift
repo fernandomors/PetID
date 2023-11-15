@@ -21,7 +21,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var createAccountButton: UIButton!
     
-    private var alert: Alert = Alert()
+    private var alert: Alert?
     private let viewModel = RegisterViewModel()
     private var auth: Auth?
     private var firestore: Firestore?
@@ -36,6 +36,7 @@ class RegisterViewController: UIViewController {
         configButton()
         validaTextField()
         self.auth = Auth.auth()
+        self.alert = Alert(controller: self)
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
@@ -52,7 +53,7 @@ class RegisterViewController: UIViewController {
         if viewModel.validateForms(name: nameValue, email: emailValue, password: passwordValue, confirmPassword: confirmPasswordValue) {
             self.registerNewUser()
         } else {
-            self.alert.createAlert(title: "Atenção", message: "Erro ao cadastrar")
+            self.alert?.createAlert(title: "Atenção", message: "Erro ao cadastrar")
         }
     }
     
@@ -69,7 +70,7 @@ class RegisterViewController: UIViewController {
         guard let emailValid = emailTextField.text, let passwordValid = passwordTextField.text else {return}
         self.auth?.createUser(withEmail: emailValid, password: passwordValid, completion: { result, error in
             if error != nil {
-                self.alert.createAlert(title: "Erro!", message: "Esse e-mail ja existe")
+                self.alert?.createAlert(title: "Erro!", message: "Esse e-mail ja existe")
             } else {
                 if let idUser = result?.user.uid {
                     self.firestore?.collection("usuários").document(idUser).setData([
@@ -78,7 +79,7 @@ class RegisterViewController: UIViewController {
                         "id": idUser
                     ])
                 }
-                self.alert.createAlert(title: "Sucesso", message: "Cadastro Efetuado com sucesso!", completion: {
+                self.alert?.createAlert(title: "Sucesso", message: "Cadastro Efetuado com sucesso!", completion: {
                     self.login()
                 })
             }
