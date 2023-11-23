@@ -41,6 +41,7 @@ class RecoverPasswordViewController: UIViewController {
         emailTextField.placeholder = "Email"
         emailTextField.layer.cornerRadius = 10
         emailTextField.layer.masksToBounds = true
+        emailTextField.keyboardType = .emailAddress
         
     }
     
