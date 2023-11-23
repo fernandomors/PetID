@@ -44,8 +44,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedResetPasswordButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: String(describing: RecoverPasswordViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RecoverPasswordViewController.self)) as? RecoverPasswordViewController
-        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+        let vc = UIStoryboard(name: String(describing: RecoverPasswordViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RecoverPasswordViewController.self)) as? RecoverPasswordViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
@@ -61,8 +61,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        let viewController = UIStoryboard(name: String(describing: RegisterViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RegisterViewController.self)) as? RegisterViewController
-        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+        let vc = UIStoryboard(name: String(describing: RegisterViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RegisterViewController.self)) as? RegisterViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedLogGoogleButton(_ sender: UIButton) {
@@ -103,7 +103,10 @@ class LoginViewController: UIViewController {
     
     private func configDelegate() {
         emailTextField.delegate = self
+        emailTextField.keyboardType = .emailAddress
         passwordTextField.delegate = self
+        passwordTextField.keyboardType = .default
+        passwordTextField.isSecureTextEntry = true
     }
     
     private func resetTextField() {
@@ -119,7 +122,6 @@ class LoginViewController: UIViewController {
     }
     
     private func configTextField() {
-        
         TextFieldPattern(textField: emailTextField, placeholder: "Usuário ou email", cornerRadius: 10, bounds: true, isSecure: false)
         TextFieldPattern(textField: passwordTextField, placeholder: "Senha", cornerRadius: 10, bounds: true, isSecure: true)
     }
@@ -169,8 +171,10 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // função para quando o usuario apertar fora do elemento, o teclado abaixa
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        passwordTextField.resignFirstResponder();emailTextField.resignFirstResponder()
     }
 }
 
@@ -188,7 +192,7 @@ extension LoginViewController: UITextFieldDelegate {
     
     // Este método sempre é disparado quando clicamos no botão "retorno"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.becomeFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
 }

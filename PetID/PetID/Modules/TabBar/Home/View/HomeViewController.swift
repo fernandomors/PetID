@@ -22,19 +22,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var lastVaccinesCollectionView: UICollectionView!
     @IBOutlet weak var programmedButton: UIButton!
     
-    var listPets: [Pets] = [Pets(name: "Luna", breed: "Golden", image: "Pet01"),
-                            Pets(name: "Garfield", breed: "Gata", image: "Pet02"),
-                            Pets(name: "Spek", breed: "buldog", image: "Pet03"),
-                            Pets(name: "Mel", breed: "Viralata", image: "Pet04")]
-    
-    var listLastVacation: [LastVacation] = [LastVacation(nameVaccines: "Giárdia", dateVaccines: "26/10/2022"),
-                                            LastVacation(nameVaccines: "Giárdia", dateVaccines: "01/03/2022"),
-                                            LastVacation(nameVaccines: "Giárdia", dateVaccines: "17/07/2019"),
-                                            LastVacation(nameVaccines: "Giárdia", dateVaccines: "11/10/2018")]
-    
-    var listVaccinesProgrameed: [ProgrammedVaccinations] = [ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "26/10/2023"),
-                                                            ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "27/10/2023"),
-                                                            ProgrammedVaccinations(nameVaccines: "Giárdia", dateVaccines: "28/10/2023")]
+    var viewModel: HomeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,13 +36,6 @@ class HomeViewController: UIViewController {
         configView()
         configButton()
         configImage()
-        
-        
-        //        let layout = UICollectionViewFlowLayout()
-        //        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
-        //        layout.minimumLineSpacing = 8
-        //        layout.minimumInteritemSpacing = 20
-        //        self.ViewPetsCollectionView.collectionViewLayout = layout
     }
     
     func configPetCollectionView() {
@@ -96,8 +77,6 @@ class HomeViewController: UIViewController {
         lastVaccinesCollectionView.setCollectionViewLayout(layout, animated: true)
         lastVaccinesCollectionView.backgroundColor = UIColor.secondary
         lastVaccinesCollectionView.showsHorizontalScrollIndicator = false
-        
-        
     }
     
     func configView() {
@@ -153,11 +132,11 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == ViewPetsCollectionView) {
-            return listPets.endIndex
+            return viewModel.getListPets
         } else if (collectionView == programmedVaccinationsCollectionView) {
-            return listVaccinesProgrameed.endIndex
+            return viewModel.getListVaccinesProgrameed
         } else if (collectionView == lastVaccinesCollectionView) {
-            return listLastVacation.endIndex
+            return viewModel.getListLastVacation
         }
         return 0
     }
@@ -165,16 +144,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == ViewPetsCollectionView {
             let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: PetsCollectionViewCell.identifier, for: IndexPath()) as? PetsCollectionViewCell
-            cell1?.setupCell(data: listPets[indexPath.row])
+            cell1?.setupCell(data: viewModel.getPets(index: indexPath))
             return cell1 ?? UICollectionViewCell()
         } else if collectionView == programmedVaccinationsCollectionView {
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: ProgrammedVaccinationCollectionViewCell.identifier, for: IndexPath()) as? ProgrammedVaccinationCollectionViewCell
-            cell2?.setupCell(data: listVaccinesProgrameed[indexPath.row])
+            cell2?.setupCell(data: viewModel.getListVaccinesProgrameed(index: indexPath))
             cell2?.layer.cornerRadius = 8
             return cell2 ?? UICollectionViewCell()
         } else if collectionView == lastVaccinesCollectionView {
             let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: LastVacationCollectionViewCell.identifier), for: IndexPath()) as? LastVacationCollectionViewCell
-            cell3?.setupCell(data: listLastVacation[indexPath.row])
+            cell3?.setupCell(data: viewModel.getLastVacation(index: indexPath))
             cell3?.layer.cornerRadius = 8
             return cell3 ?? UICollectionViewCell()
         }
@@ -193,7 +172,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(listPets[indexPath.row].name)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -207,11 +186,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
-    //        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    //                // Define o espaçamento horizontal entre as células na mesma linha aqui
-    //            if collectionView == ViewPetsCollectionView {
-    //                return 50
-    //            }
-    //                return 0
-    //            }
+//            func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//                    // Define o espaçamento horizontal entre as células na mesma linha aqui
+//                if collectionView == ViewPetsCollectionView {
+//                    return 20
+//                }
+//                    return 0
+//                }
 }
