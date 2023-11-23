@@ -37,12 +37,12 @@ class RegisterViewModel {
         return (!validateName(name) && !validateEmail(email) && !validatePassword(password) && !validateConfirmPassword(confirmPassword))
     }
     
-    public func getConfigTextFieldShouldReturn(textField: UITextField, nameTextField: UITextField, emailTextField: UITextField, passwordTextField: UITextField, confirmPasswordTextField: UITextField) -> Bool{
+    public func getConfigTextFieldShouldReturn(textField: UITextField, nameTextField: UITextField, lastNameTextField: UITextField, emailTextField: UITextField, passwordTextField: UITextField, confirmPasswordTextField: UITextField) -> Bool{
         textField.resignFirstResponder()
         
         switch textField {
         case nameTextField:
-            emailTextField.becomeFirstResponder()
+            lastNameTextField.becomeFirstResponder()
         case emailTextField:
             passwordTextField.becomeFirstResponder()
         case passwordTextField:

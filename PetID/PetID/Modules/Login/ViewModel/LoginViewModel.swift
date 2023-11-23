@@ -21,4 +21,16 @@ class LoginViewModel {
     public func validatePassword(_ password: String) -> Bool {
         return !(password.count < 6)
     }
+    
+    public func getConfigTextFieldShouldReturn(textField: UITextField, emailTextField: UITextField, passwordTextField: UITextField ) -> Bool{
+        textField.resignFirstResponder()
+        
+        switch textField {
+        case emailTextField:
+            passwordTextField.becomeFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return true
+    }
 }

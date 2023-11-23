@@ -98,6 +98,10 @@ class RegisterViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
+        
+        emailTextField.keyboardType = .emailAddress
+        passwordTextField.isSecureTextEntry = true
+        confirmPasswordTextField.isSecureTextEntry = true
     }
     
     private func textFieldPattern(TextField: UITextField, Placeholder: String, Radius: CGFloat, maskToBounds: Bool) {
@@ -159,6 +163,6 @@ extension RegisterViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        viewModel.getConfigTextFieldShouldReturn(textField: textField, nameTextField: nameTextField, emailTextField: emailTextField, passwordTextField: passwordTextField, confirmPasswordTextField: confirmPasswordTextField)
+        viewModel.getConfigTextFieldShouldReturn(textField: textField, nameTextField: nameTextField, lastNameTextField: lastNameTextField, emailTextField: emailTextField, passwordTextField: passwordTextField, confirmPasswordTextField: confirmPasswordTextField)
     }
 }
