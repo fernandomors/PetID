@@ -104,9 +104,11 @@ class LoginViewController: UIViewController {
     private func configDelegate() {
         emailTextField.delegate = self
         emailTextField.keyboardType = .emailAddress
+        emailTextField.autocorrectionType = .no
         passwordTextField.delegate = self
         passwordTextField.keyboardType = .default
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.autocorrectionType = .no
     }
     
     private func resetTextField() {
@@ -192,7 +194,6 @@ extension LoginViewController: UITextFieldDelegate {
     
     // Este método sempre é disparado quando clicamos no botão "retorno"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        viewModel.getConfigTextFieldShouldReturn(textField: textField, emailTextField: emailTextField, passwordTextField: passwordTextField)
     }
 }

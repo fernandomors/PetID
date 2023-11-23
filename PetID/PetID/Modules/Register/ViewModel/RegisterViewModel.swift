@@ -43,6 +43,8 @@ class RegisterViewModel {
         switch textField {
         case nameTextField:
             lastNameTextField.becomeFirstResponder()
+        case lastNameTextField:
+            emailTextField.becomeFirstResponder()
         case emailTextField:
             passwordTextField.becomeFirstResponder()
         case passwordTextField:
