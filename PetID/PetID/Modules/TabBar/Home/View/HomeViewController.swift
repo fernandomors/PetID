@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Código para ocultar a navigation bar
         navigationController?.setNavigationBarHidden(true, animated: true)
-        
         configPetCollectionView()
         configProgrammedVaccinesCollectionView()
         configLastVacationCollectionView()

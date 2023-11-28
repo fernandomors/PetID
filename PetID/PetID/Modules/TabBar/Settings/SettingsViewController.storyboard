@@ -70,9 +70,12 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tappedMyPetsButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dc2-LB-qFQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCP-DB-7HD">
-                                <rect key="frame" x="25" y="340.5" width="325" height="50"/>
+                                <rect key="frame" x="25" y="335.5" width="325" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="D9T-SW-AE4"/>
                                 </constraints>
@@ -80,7 +83,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXv-HJ-1HD">
-                                <rect key="frame" x="25" y="430.5" width="325" height="50"/>
+                                <rect key="frame" x="25" y="420.5" width="325" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2nD-X6-gjs"/>
                                 </constraints>
@@ -96,8 +99,8 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eCP-DB-7HD" secondAttribute="trailing" constant="25" id="72C-Uw-exM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BXv-HJ-1HD" secondAttribute="trailing" constant="25" id="Bi0-eM-HEI"/>
                             <constraint firstItem="k2M-Fo-Kdn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="NRZ-SU-WJg"/>
-                            <constraint firstItem="eCP-DB-7HD" firstAttribute="top" secondItem="k2M-Fo-Kdn" secondAttribute="bottom" constant="40" id="Zma-tJ-viA"/>
-                            <constraint firstItem="BXv-HJ-1HD" firstAttribute="top" secondItem="eCP-DB-7HD" secondAttribute="bottom" constant="40" id="Zny-OW-AWx"/>
+                            <constraint firstItem="eCP-DB-7HD" firstAttribute="top" secondItem="k2M-Fo-Kdn" secondAttribute="bottom" constant="35" id="Zma-tJ-viA"/>
+                            <constraint firstItem="BXv-HJ-1HD" firstAttribute="top" secondItem="eCP-DB-7HD" secondAttribute="bottom" constant="35" id="Zny-OW-AWx"/>
                             <constraint firstItem="IRP-gO-dLp" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ce0-lL-nqU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="k2M-Fo-Kdn" secondAttribute="trailing" constant="25" id="ihZ-ts-USv"/>
                             <constraint firstItem="BXv-HJ-1HD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="oaj-VK-B1W"/>

@@ -104,18 +104,19 @@ class RegisterViewController: UIViewController {
         confirmPasswordTextField.isSecureTextEntry = true
     }
     
-    private func textFieldPattern(TextField: UITextField, Placeholder: String, Radius: CGFloat, maskToBounds: Bool) {
+    private func textFieldPattern(TextField: UITextField, Placeholder: String, Radius: CGFloat, maskToBounds: Bool, isSecure: Bool, autoCorrection: UITextAutocorrectionType) {
         TextField.placeholder = Placeholder
         TextField.layer.cornerRadius = Radius
         TextField.layer.masksToBounds = maskToBounds
+        TextField.isSecureTextEntry = isSecure
     }
     
     func configTextField() {
-        textFieldPattern(TextField: nameTextField, Placeholder: "Nome", Radius: 10, maskToBounds: true)
-        textFieldPattern(TextField: lastNameTextField, Placeholder: "Sobrenome", Radius: 10, maskToBounds: true)
-        textFieldPattern(TextField: emailTextField, Placeholder: "Email", Radius: 10, maskToBounds: true)
-        textFieldPattern(TextField: passwordTextField, Placeholder: "Senha", Radius: 10, maskToBounds: true)
-        textFieldPattern(TextField: confirmPasswordTextField, Placeholder: "Confirme a senha", Radius: 10, maskToBounds: true)
+        textFieldPattern(TextField: nameTextField, Placeholder: "Nome", Radius: 10, maskToBounds: true, isSecure: false, autoCorrection: .no)
+        textFieldPattern(TextField: lastNameTextField, Placeholder: "Sobrenome", Radius: 10, maskToBounds: true, isSecure: false, autoCorrection: .no)
+        textFieldPattern(TextField: emailTextField, Placeholder: "Email", Radius: 10, maskToBounds: true, isSecure: false, autoCorrection: .no)
+        textFieldPattern(TextField: passwordTextField, Placeholder: "Senha", Radius: 10, maskToBounds: true, isSecure: true, autoCorrection: .no)
+        textFieldPattern(TextField: confirmPasswordTextField, Placeholder: "Confirme a senha", Radius: 10, maskToBounds: true, isSecure: true, autoCorrection: .no)
     }
     
     func configView() {
@@ -147,7 +148,7 @@ class RegisterViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+        nameTextField.resignFirstResponder();lastNameTextField.resignFirstResponder();emailTextField.resignFirstResponder();passwordTextField.resignFirstResponder();confirmPasswordTextField.resignFirstResponder()
     }
     
 }

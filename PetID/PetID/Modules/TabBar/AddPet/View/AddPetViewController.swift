@@ -21,6 +21,9 @@ class AddPetViewController: UIViewController {
     @IBOutlet weak var kgLabel: UILabel!
     @IBOutlet weak var registerPetButton: UIButton!
     
+    private var viewModel = AddPetViewModel()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configDelegate()
@@ -114,7 +117,9 @@ class AddPetViewController: UIViewController {
     @IBAction func tappedPetSizeSegmentedControl(_ sender: UISegmentedControl) {
         
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        namePetTextField.resignFirstResponder();breedPetTextField.resignFirstResponder();sexPetTextField.resignFirstResponder()
+    }
 }
 
 extension AddPetViewController: UITextFieldDelegate{
@@ -131,7 +136,6 @@ extension AddPetViewController: UITextFieldDelegate{
     
     // esté método sempre é disparado quando clicamos no botão "retorno"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.becomeFirstResponder()
-        return true
+        viewModel.getConfigTextFieldShouldReturn(textField: textField, namePetTextField: namePetTextField, breedPetTextField: breedPetTextField, sexPetTextField: sexPetTextField)
     }
 }

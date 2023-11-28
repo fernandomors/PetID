@@ -10,11 +10,8 @@ import UIKit
 class PetsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var viewCollection: UIView!
-    
     @IBOutlet weak var petImage: UIImageView!
-    
     @IBOutlet weak var namePetLabel: UILabel!
-    
     @IBOutlet weak var breedPetLabel: UILabel!
     
     static let identifier = String(describing: PetsCollectionViewCell.self)
@@ -31,7 +28,7 @@ class PetsCollectionViewCell: UICollectionViewCell {
     }
     
     func configView() {
-        viewCollection.backgroundColor = UIColor(red: 181/255, green: 145/255, blue: 121/255, alpha: 1.0)
+        viewCollection.backgroundColor = UIColor.tertiary
         viewCollection.layer.cornerRadius = 5
     }
     

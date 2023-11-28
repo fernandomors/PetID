@@ -28,7 +28,7 @@ class LastVacationCollectionViewCell: UICollectionViewCell {
     func configImage() {
         editImage.image = UIImage(systemName: "pencil")
         editImage.frame.size = CGSize(width: 5, height: 5)
-        editImage.tintColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+        editImage.tintColor = UIColor.TextPrimary
         
         checkVaccinesImage.image = UIImage(named: "Check")
         
@@ -36,10 +36,10 @@ class LastVacationCollectionViewCell: UICollectionViewCell {
     
     func configLabel() {
         nameVaccinesLabel.font = UIFont.systemFont(ofSize: 16)
-        nameVaccinesLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+        nameVaccinesLabel.textColor = UIColor.TextPrimary
         
         DateVaccinesLabel.font = UIFont.systemFont(ofSize: 16)
-        DateVaccinesLabel.textColor = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
+        DateVaccinesLabel.textColor = UIColor.TextPrimary
     }
     
     func setupCell(data: LastVacation) {

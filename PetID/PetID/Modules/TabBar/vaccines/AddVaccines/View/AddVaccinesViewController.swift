@@ -16,6 +16,8 @@ class AddVaccinesViewController: UIViewController {
     @IBOutlet weak var dateVaccinesTextField: UITextField!
     @IBOutlet weak var addVaccinesButton: UIButton!
     
+    private var viewModel = AddVaccinesViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configTextField()
@@ -26,17 +28,18 @@ class AddVaccinesViewController: UIViewController {
         dateVaccinesTextField.inputAccessoryView = self.addDoneButton()
     }
     
-    private func textFieldPattern(textField: UITextField, delegate: UITextFieldDelegate, placeholder: String, keyBoard: UIKeyboardType, color: UIColor) {
+    private func textFieldPattern(textField: UITextField, delegate: UITextFieldDelegate, radius: CGFloat, placeholder: String, keyBoard: UIKeyboardType, color: UIColor) {
         textField.delegate.self = delegate
+        textField.layer.cornerRadius = radius
         textField.placeholder = placeholder
         textField.keyboardType = keyBoard
         textField.backgroundColor = color
     }
     
     private func configTextField() {
-        textFieldPattern(textField: nameVaccinesTextField, delegate: self, placeholder: "Nome:", keyBoard: .default, color: UIColor.secondary)
-        textFieldPattern(textField: petVaccinesTextField, delegate: self, placeholder: "Pet:", keyBoard: .default, color: UIColor.secondary)
-        textFieldPattern(textField: dateVaccinesTextField, delegate: self, placeholder: "Data:", keyBoard: .default, color: UIColor.secondary)
+        textFieldPattern(textField: nameVaccinesTextField, delegate: self, radius: 20, placeholder: "Nome:", keyBoard: .default, color: UIColor.secondary)
+        textFieldPattern(textField: petVaccinesTextField, delegate: self, radius: 10, placeholder: "Pet:", keyBoard: .default, color: UIColor.secondary)
+        textFieldPattern(textField: dateVaccinesTextField, delegate: self, radius: 15, placeholder: "Data:", keyBoard: .default, color: UIColor.secondary)
     }
     
     private func configView() {
@@ -57,7 +60,7 @@ class AddVaccinesViewController: UIViewController {
         addVaccinesButton.backgroundColor = UIColor.secondary
         addVaccinesButton.layer.cornerRadius = 10
         addVaccinesButton.setTitle("Adicionar", for: .normal)
-        addVaccinesButton.tintColor = UIColor.Textsecondary
+        addVaccinesButton.tintColor = UIColor.TextPrimary
     }
     
     @IBAction func tappedPetVaccinesTextField(_ sender: UITextField) {
@@ -104,6 +107,9 @@ class AddVaccinesViewController: UIViewController {
     @IBAction func tappedAddVaccinesButton(_ sender: UIButton) {
         
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        nameVaccinesTextField.resignFirstResponder();  petVaccinesTextField.resignFirstResponder(); dateVaccinesTextField.resignFirstResponder()
+    }
 }
 
 extension AddVaccinesViewController: UITextFieldDelegate {
@@ -117,7 +123,6 @@ extension AddVaccinesViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        viewModel.getConfigTextFieldShouldReturn(textField: textField, nameVaccinesTextField: nameVaccinesTextField, petVaccinesTextField: petVaccinesTextField, dateVaccinesTextField: dateVaccinesTextField)
     }
 }

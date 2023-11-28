@@ -116,7 +116,7 @@ class LoginViewController: UIViewController {
         passwordTextField.text = ""
     }
     
-    private func TextFieldPattern(textField: UITextField, placeholder: String, cornerRadius: CGFloat, bounds: Bool, isSecure: Bool) {
+    private func TextFieldPattern(textField: UITextField, placeholder: String, cornerRadius: CGFloat, bounds: Bool, isSecure: Bool, autoCorrection: UITextAutocorrectionType) {
         textField.placeholder = placeholder
         textField.layer.cornerRadius = cornerRadius
         textField.layer.masksToBounds = bounds
@@ -124,8 +124,8 @@ class LoginViewController: UIViewController {
     }
     
     private func configTextField() {
-        TextFieldPattern(textField: emailTextField, placeholder: "Usuário ou email", cornerRadius: 10, bounds: true, isSecure: false)
-        TextFieldPattern(textField: passwordTextField, placeholder: "Senha", cornerRadius: 10, bounds: true, isSecure: true)
+        TextFieldPattern(textField: emailTextField, placeholder: "Usuário ou email", cornerRadius: 10, bounds: true, isSecure: false, autoCorrection: .no)
+        TextFieldPattern(textField: passwordTextField, placeholder: "Senha", cornerRadius: 10, bounds: true, isSecure: true, autoCorrection: .no)
     }
     
     private func configView() {

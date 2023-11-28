@@ -66,4 +66,10 @@ class SettingsViewController: UIViewController {
         buttonPattern(button: myPetsButton, title: "Meus pets", backgraund: UIColor.white, tintcolor: UIColor.TextPrimary, radius: 10)
     }
     
+    
+    @IBAction func tappedMyPetsButton(_ sender: UIButton) {
+        let vc = UIStoryboard(name: String(describing: RegisteredPetsViewController.self), bundle: nil).instantiateViewController(identifier: String(describing: RegisteredPetsViewController.self)) as? RegisteredPetsViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    
 }

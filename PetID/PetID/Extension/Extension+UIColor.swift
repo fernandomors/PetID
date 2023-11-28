@@ -28,11 +28,6 @@ extension UIColor {
     /// Cor padrão do padrão de textos
     ///  - Cor marrom forte
     ///  - HEX: 795A45
-    static let Textsecondary = UIColor(red: 121/255, green: 90/255, blue: 69/255, alpha: 1.0)
-    
-    /// Cor padrão do padrão de textos
-    ///  - Cor marrom forte
-    ///  - HEX: 795A45
     static let titlePrimary = UIColor(red: 243/255, green: 234/255, blue: 222/255, alpha: 1.0)
     /// Cor Terciária
     ///  - Cor marrom forte

@@ -50,6 +50,8 @@
 		6DD363AF2ACE530B004C7D49 /* RegisteredPetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD363AE2ACE530B004C7D49 /* RegisteredPetsViewController.swift */; };
 		6DD363B12ACE5326004C7D49 /* RegisteredPetsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD363B02ACE5326004C7D49 /* RegisteredPetsViewController.storyboard */; };
 		6DD363B52ACE6772004C7D49 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD363B42ACE6772004C7D49 /* TabBarController.storyboard */; };
+		6DE51BAF2B14E9520008D8CA /* AddPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE51BAE2B14E9520008D8CA /* AddPetViewModel.swift */; };
+		6DE51BB52B14F0090008D8CA /* AddVaccinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE51BB42B14F0090008D8CA /* AddVaccinesViewModel.swift */; };
 		6DFB43E62AD59B72000CCE3D /* AddVaccinesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DFB43E52AD59B71000CCE3D /* AddVaccinesViewController.storyboard */; };
 		6DFB43E82AD59B84000CCE3D /* AddVaccinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFB43E72AD59B84000CCE3D /* AddVaccinesViewController.swift */; };
 		92F33CD806DE9BD14D04F3F2 /* Pods_PetIDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895C1B35965AC0B8DEE3C484 /* Pods_PetIDTests.framework */; };
@@ -128,6 +130,8 @@
 		6DD363AE2ACE530B004C7D49 /* RegisteredPetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsViewController.swift; sourceTree = "<group>"; };
 		6DD363B02ACE5326004C7D49 /* RegisteredPetsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisteredPetsViewController.storyboard; sourceTree = "<group>"; };
 		6DD363B42ACE6772004C7D49 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		6DE51BAE2B14E9520008D8CA /* AddPetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetViewModel.swift; sourceTree = "<group>"; };
+		6DE51BB42B14F0090008D8CA /* AddVaccinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVaccinesViewModel.swift; sourceTree = "<group>"; };
 		6DFB43E52AD59B71000CCE3D /* AddVaccinesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddVaccinesViewController.storyboard; sourceTree = "<group>"; };
 		6DFB43E72AD59B84000CCE3D /* AddVaccinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVaccinesViewController.swift; sourceTree = "<group>"; };
 		86920FCD4D666151E97703D1 /* Pods-PetID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetID.debug.xcconfig"; path = "Target Support Files/Pods-PetID/Pods-PetID.debug.xcconfig"; sourceTree = "<group>"; };
@@ -255,8 +259,8 @@
 		6D628D622AE0361B0087AD53 /* AddPet */ = {
 			isa = PBXGroup;
 			children = (
-				6D628D632AE036480087AD53 /* AddPetViewController.storyboard */,
-				6D628D652AE0365F0087AD53 /* AddPetViewController.swift */,
+				6DE51BAC2B14E8CA0008D8CA /* View */,
+				6DE51BAD2B14E8D60008D8CA /* ViewModel */,
 			);
 			path = AddPet;
 			sourceTree = "<group>";
@@ -457,8 +461,8 @@
 		6DC235022AD4A0F600ECA829 /* AddVaccines */ = {
 			isa = PBXGroup;
 			children = (
-				6DFB43E52AD59B71000CCE3D /* AddVaccinesViewController.storyboard */,
-				6DFB43E72AD59B84000CCE3D /* AddVaccinesViewController.swift */,
+				6DE51BB02B14EF650008D8CA /* View */,
+				6DE51BB12B14EF710008D8CA /* ViewModel */,
 			);
 			path = AddVaccines;
 			sourceTree = "<group>";
@@ -488,6 +492,40 @@
 				6DD363B02ACE5326004C7D49 /* RegisteredPetsViewController.storyboard */,
 			);
 			path = RegisteredPets;
+			sourceTree = "<group>";
+		};
+		6DE51BAC2B14E8CA0008D8CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D628D632AE036480087AD53 /* AddPetViewController.storyboard */,
+				6D628D652AE0365F0087AD53 /* AddPetViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6DE51BAD2B14E8D60008D8CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6DE51BAE2B14E9520008D8CA /* AddPetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6DE51BB02B14EF650008D8CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6DFB43E52AD59B71000CCE3D /* AddVaccinesViewController.storyboard */,
+				6DFB43E72AD59B84000CCE3D /* AddVaccinesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6DE51BB12B14EF710008D8CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6DE51BB42B14F0090008D8CA /* AddVaccinesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C4E95FA42AF83AE8004B1EB2 /* Resources */ = {
@@ -795,6 +833,7 @@
 				6D94E4D52ACCAD43004D53E6 /* RecoverPasswordViewController.swift in Sources */,
 				6D760BC62AEAE9E900C21572 /* RegisteredPetsTableViewCell.swift in Sources */,
 				6DD1F8992AC49F8B007FEC1A /* LoginViewController.swift in Sources */,
+				6DE51BB52B14F0090008D8CA /* AddVaccinesViewModel.swift in Sources */,
 				C4E95FA92AF850BA004B1EB2 /* Alert.swift in Sources */,
 				6DC234FA2AD4860F00ECA829 /* VaccinesViewController.swift in Sources */,
 				6DD363AF2ACE530B004C7D49 /* RegisteredPetsViewController.swift in Sources */,
@@ -810,6 +849,7 @@
 				6D4999912AE1DAC200805B15 /* LastVacation.swift in Sources */,
 				C4E95FB52AF93540004B1EB2 /* User.swift in Sources */,
 				6DBB6A7F2ACDE69E00DC8424 /* HomeViewController.swift in Sources */,
+				6DE51BAF2B14E9520008D8CA /* AddPetViewModel.swift in Sources */,
 				6D628D662AE0365F0087AD53 /* AddPetViewController.swift in Sources */,
 				C4E95FB02AF85902004B1EB2 /* RegisterViewModel.swift in Sources */,
 				6D84C8692B05648E009A1F11 /* HomeViewModel.swift in Sources */,

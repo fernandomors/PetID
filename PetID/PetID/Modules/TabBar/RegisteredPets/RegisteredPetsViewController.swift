@@ -20,6 +20,7 @@ class RegisteredPetsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
         tableViewProtocol()
         configTableView()
         configImage()
